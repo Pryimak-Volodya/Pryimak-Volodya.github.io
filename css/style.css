@@ -83,3 +83,13 @@ h6 {
 a {
     color: red;
 }
+
+.foto_div {
+    width: 300px;
+    height: 300px;
+    background-image: url(../img/PeopleFoto2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 10px solid green;
+    background-color: black;
+}
