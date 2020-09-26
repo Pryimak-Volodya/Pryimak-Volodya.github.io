@@ -1,16 +1,16 @@
 [{
-        "name": "Максим",
-        "password": "maxim12",
+        "name": "Ростислав",
+        "password": "rostyslav_1",
         "status": "worker"
     },
     {
         "name": "Рома",
-        "password": "roma13",
+        "password": "roma_1",
         "status": "moderator"
     },
     {
         "name": "Анрій",
-        "password": "",
+        "password": "andrii_1",
         "status": "admin"
     },
     {
