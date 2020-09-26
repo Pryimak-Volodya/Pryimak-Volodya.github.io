@@ -151,4 +151,5 @@ label {
 
 #enter {
     transition: 0.3s;
+    outline: none;
 }
