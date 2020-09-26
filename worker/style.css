@@ -35,3 +35,9 @@ p{
     background-color: #666666;
     border-radius: 15px;
 }
+.fotoUser {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-image: url(./img/worker.jpg);
+}
