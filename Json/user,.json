@@ -1,0 +1,26 @@
+[{
+        "name": "Ростислав",
+        "password": "rostyslav_1",
+        "status": "worker"
+    },
+    {
+        "name": "Рома",
+        "password": "roma_1",
+        "status": "moderator"
+    },
+    {
+        "name": "Анрій",
+        "password": "andrii_1",
+        "status": "admin"
+    },
+    {
+        "name": "Сергій",
+        "password": "serjey_1",
+        "status": "admin"
+    },
+    {
+        "name": "Вова",
+        "password": "vova_1",
+        "status": "admin"
+    }
+]
