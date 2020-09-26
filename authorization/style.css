@@ -50,7 +50,6 @@
     margin: 0 0 1.5em 0;
     /* input */
 }
-
 .block_form .block_form-content .used_information .input100 {
     position: relative;
     width: 80%;
@@ -126,4 +125,7 @@ label {
     font-size: 0.7em;
     color: #666666;
     font-weight: 600;
+}
+#enter {
+    cursor: pointer;
 }
