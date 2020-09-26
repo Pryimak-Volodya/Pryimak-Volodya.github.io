@@ -12,11 +12,22 @@
     font-family: Montserrat-Bold;
     src: url('../fonts/Montserrat-Bold.ttf');
 }
+
+.block_bg {
+    display: inline-block;
+    width: 60vw;
+    height: 100vh;
+    background-image: url(../img/bg-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* форма */
 .block_form {
     display: inline-block;
-    padding: 7% 25%;
-    width: calc(40vw - 1%);
+    padding: 7% 2%;
+    width: calc(40vw - 4%);
     height: calc(100vh - 14vw);
     position: absolute;
     top: 0px;
@@ -50,6 +61,7 @@
     margin: 0 0 1.5em 0;
     /* input */
 }
+
 .block_form .block_form-content .used_information .input100 {
     position: relative;
     width: 80%;
@@ -125,7 +137,4 @@ label {
     font-size: 0.7em;
     color: #666666;
     font-weight: 600;
-}
-#enter {
-    cursor: pointer;
 }
