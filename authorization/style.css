@@ -12,22 +12,11 @@
     font-family: Montserrat-Bold;
     src: url('../fonts/Montserrat-Bold.ttf');
 }
-
-.block_bg {
-    display: inline-block;
-    width: 60vw;
-    height: 100vh;
-    background-image: url(../img/bg-1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 /* форма */
 .block_form {
     display: inline-block;
-    padding: 7% 2%;
-    width: calc(40vw - 4%);
+    padding: 7% 25%;
+    width: calc(40vw - 1%);
     height: calc(100vh - 14vw);
     position: absolute;
     top: 0px;
