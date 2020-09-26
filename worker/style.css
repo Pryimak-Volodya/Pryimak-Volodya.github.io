@@ -12,3 +12,10 @@
     font-family: Montserrat-Bold;
     src: url('./fonts/Montserrat-Bold.ttf');
 }
+.list {
+    display: block;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: #666666;
+}
