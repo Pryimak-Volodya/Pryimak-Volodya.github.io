@@ -6,8 +6,8 @@ $.ajax({
         person = JSON.parse(name);
     }
 });
-$('#enter').on('click', next);
-function next() {
+$('#enter').on('click', authorization);
+function authorization() {
     // user entrance
     user_name_entrance = $('#name').val();
     user_password_entrance = $('#password').val()
@@ -30,12 +30,11 @@ function next() {
     // ---------------------- test варіант під теперішню форму
     for (i = 0; i < person.length; i++) {
         if (user_dataBase[i].name == user_name_entrance && user_dataBase[i].password == user_password_entrance) {
-            alert('Увійшов : ' + user_name_entrance + '. Пароль : ' + user_password_entrance)
-            return;
-        }
-        else {
-            alert('Заповни правильно дані');
-            return;
+            return profile_user();
         }
     }
+    return alert('Заповни правильно дані');
+}
+function profile_user() {
+    alert('Увійшов : ' + user_name_entrance + '. Пароль : ' + user_password_entrance)
 }
