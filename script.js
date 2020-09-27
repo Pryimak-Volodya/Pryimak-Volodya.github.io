@@ -1,6 +1,7 @@
 $.ajax({
     url: './user.json',
     method: 'get',
+    async: false,
     dataType: 'html',
     success: function (name) {
         person = JSON.parse(name);

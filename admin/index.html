@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link rel="stylesheet" href="./style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
 </head>
 
@@ -15,12 +16,46 @@
         <div class="menu_link">
             <h2> <i class="fas fa-cogs"></i> Параметри</h2>
             <div id="lineal_h2"></div>
-            <h2> <i class="far fa-user"></i>Мій профіль</h2>
-            <h2> <i class="fas fa-clipboard-list"></i>Список справ</h2>
-            <h2> <i class="fas fa-users"></i>Учасники</h2>
+            <h3> <i class="far fa-user"></i>Мій профіль</h3>
+            <h3> <i class="fas fa-clipboard-list"></i>Список справ</h3>
+            <h3> <i class="fas fa-users"></i>Учасники</h3>
         </div>
-        <div class="menu_block"></div>
+        <div class="menu_block">
+            <div class="edit_user">
+                <div class="edit_user_menu">
+                    <div class="edit_user_menu_1">
+                        <h3>Працівники</h3>
+                    </div>
+                    <div class="edit_user_menu_2">
+                        <span>Всі працівники</span>
+                        <span>Адміністратори</span>
+                        <span>Модератори</span>
+                        <span>Працівники</span>
+                    </div>
+
+                </div>
+                <div id="lineal_div"></div>
+                <div class="ul_user">
+                    <ul>
+                        <li>
+                            <span id="number_user_for_admin">1</span>
+                            <span id="name_user_for_admin"><i class="fas fa-user-alt"></i> Вася</span>
+                            <span id="password_user_for_admin"><i class="fas fa-lock"></i> vasia_1</span>
+                            <span id="status_user_for_admin"> <i class="fas fa-briefcase"></i> moderator</span>
+                            <span class="icons_user_for_adnim"><i class="fas fa-user-edit"></i></span>
+                            <span class="icons_user_for_adnim"> <i class="far fa-save"></i></span>
+                            <span class="icons_user_for_adnim"><i class="fas fa-trash-alt"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="admin_user"></div>
+            <div class="moderator_user"></div>
+            <div class="workes_user"></div>
+
+        </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
