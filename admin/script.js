@@ -26,7 +26,12 @@ function all_user() {
             person = JSON.parse(name);
         }
     });
-    $(clonv).clone().appendTo($('.ul_user'));
-    // list = Array.from($('.ul_user')[0].children[0].children[0].children);
-    // list2 = Array.from($('.ul_user')[0].children[1].children[0].children);
+    for (i = 0; i < person.length; i++) {
+        $(clonv).clone().appendTo($('.ul_user'));
+        list = Array.from($('.ul_user')[0].children[i].children[0].children);
+        list[0].innerHTML = 2;
+        list[1].children[1].innerHTML = person[i].name;
+        list[2].children[1].innerHTML = person[i].password;
+        list[3].children[1].innerHTML = person[i].status;
+    }
 }
