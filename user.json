@@ -22,5 +22,45 @@
         "name": "Вова",
         "password": "vova_1",
         "status": "admin"
+    },
+    {
+        "name": "Перто",
+        "password": "petro_1",
+        "status": "worker"
+    },
+    {
+        "name": "Микола",
+        "password": "mykola_1",
+        "status": "worker"
+    },
+    {
+        "name": "Яна",
+        "password": "jana_1",
+        "status": "worker"
+    },
+    {
+        "name": "Галка",
+        "password": "galka_1",
+        "status": "worker"
+    },
+    {
+        "name": "Таня",
+        "password": "tania_1",
+        "status": "worker"
+    },
+    {
+        "name": "Діма",
+        "password": "dima_1",
+        "status": "worker"
+    },
+    {
+        "name": "Катя",
+        "password": "katia_1",
+        "status": "moderator"
+    },
+    {
+        "name": "Оля",
+        "password": "olena_1",
+        "status": "moderator"
     }
 ]
