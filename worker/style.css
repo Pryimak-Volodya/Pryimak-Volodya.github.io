@@ -115,7 +115,6 @@ input + label{
     margin: 5px ;
     font-size: 1.2em;
     color: black;
-
 }
 input label:hover, input:checked + label{
     color: white;
