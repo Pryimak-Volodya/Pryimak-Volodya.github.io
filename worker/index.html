@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <header>
+        <h1>Мій щоденник</h1>
+        <button id="exit">Вихід</button>
+    </header>
 
     <div class="user">
         <p id="workerName">Worker name</p>
@@ -19,7 +23,7 @@
     </div>
     <div class="listSprav">
         <ol>
-            <h1>Список справ:</h1>
+            <h1>Список виконаних справ:</h1>
             <li>
                 <input id='one' type='checkbox' />
                     <label for='one'>
@@ -44,6 +48,13 @@
                     Повторити пункт №3.
                     </label>
             </li>
+        </ol>
+    </div>
+    <div class="listSprav edit">
+        <ol>
+            <h1>Список справ на завтра:</h1>
+            <button class="new deal">Додати</button>
+
         </ol>
     </div>
 <script src="script.js"></script>

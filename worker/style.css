@@ -31,21 +31,62 @@ img{
 }
 @font-face {
     font-family: Poppins-Regular;
-    src: url('./fonts/Courier\ New.ttf');
+    src: url('../fonts/Courier\ New.ttf');
 
 }
 @font-face {
     font-family: Montserrat-Bold;
-    src: url('./fonts/Montserrat-Bold.ttf');
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+header {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+}
+#exit {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    border: 1px solid silver;
+    border-radius: 15px;
+    padding: 8px;
+    color: black;
+    font-size: 2em;
+    font-family: Montserrat-Bold;
+    box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
+                6px 8px 3px -1px rgba(128,128,128,1);
+}
+header h1 {
+    position: relative;
+    left: 40%;
+    font-size: 2.4em;
+    display: inline-block;
+    font-family: Poppins-Regular;
+    color: black;
+    text-align: center;
+    font-weight: 100;
+    padding: 20px;
+}
+#exit:hover, .deal:hover {
+    background-color: silver;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#exit {
+    transition: 0.3s;
+    outline: none;
 }
 .user p{
     font-size: 3em;
+    font-family: Poppins-Regular;
     font-weight: 500;
     padding: 5px;
 }
 .user span {
     display: block;
     font-size: 2em;
+    font-family: Poppins-Regular;
     padding: 10px 5px;
     text-align: left;
 }
@@ -55,9 +96,8 @@ img{
     width: 400px;
     height: 400px;
     margin: 20px;
-    background-color: silver;
+    border: 1px solid silver;
     text-align: center;
-    border: 1px solid black;
     border-radius: 15px;
     box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
                 6px 8px 3px -1px rgba(128,128,128,1);
@@ -65,39 +105,41 @@ img{
 .listSprav {
     display: inline-block;
     position: relative;
-    width: 400px;
-    margin: 15px;
-    background-color: silver;
-    border: 1px solid black;
+    width: auto;
+    margin: 25px;
+
+    border: 1px solid silver;
     border-radius: 15px;
     box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
                 6px 8px 3px -1px rgba(128,128,128,1);
 }
 .fotoUser {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 50%;
+    height: 50%;
     margin: 10px auto;
     background-image: url(../img/worker.jpg);
-    background-size: 100% auto;
+    background-size: 100%;
     background-repeat: no-repeat;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 15px;
 }
 ol{
     position: relative;
-    padding: 25px;
+    padding: 30px;
     font-size: 1.2em;
 }
 ol h1{
     font-weight: 400;
     font-size: 2em;
-    margin-left: 10px;
+    font-family: Poppins-Regular;
+    margin-left: 15px;
     cursor: default;
 }
 li {
-    margin: 10px;
-    font-size: 1.3em;
+    margin: 15px;
+    font-size: 1.2em;
+    font-family: Poppins-Regular;
 }
 input {
     display: inline-block;
@@ -108,7 +150,6 @@ input {
     border-radius: 3px;
     cursor: pointer;
 }
-
 input + label{
     position: relative;
     display: inline-block;
@@ -117,5 +158,19 @@ input + label{
     color: black;
 }
 input label:hover, input:checked + label{
-    color: white;
+    font-weight: 600;
 }
+.deal {
+    position: relative;
+    top: 5px;
+    right: 5px;
+    border: 1px solid silver;
+    border-radius: 15px;
+    padding: 8px;
+    color: black;
+    font-size: 1em;
+    font-family: Montserrat-Bold;
+    box-shadow: 5px 2px 5px -1px rgba(128,128,128,1),
+                5px 6px 3px -1px rgba(128,128,128,1);
+}
+
