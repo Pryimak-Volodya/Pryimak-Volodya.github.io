@@ -25,6 +25,12 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 /*--------------------*/
+body{
+    background-image: url(../img/bg_fon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
 img{
     width: 100%;
     display: block;
@@ -93,6 +99,7 @@ header h1 {
 .user {
     display: inline-block;
     position: relative;
+    background-color: white;
     width: 400px;
     height: 400px;
     margin: 20px;
@@ -107,7 +114,7 @@ header h1 {
     position: relative;
     width: auto;
     margin: 25px;
-
+    background-color: white;
     border: 1px solid silver;
     border-radius: 15px;
     box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
