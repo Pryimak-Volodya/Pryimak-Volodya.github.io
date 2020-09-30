@@ -1,4 +1,8 @@
 [{
+        "name": "Андрій",
+        "password": "andrii_1",
+        "status": "admin"
+    }, {
         "name": "Ростислав",
         "password": "rostyslav_1",
         "status": "worker"
@@ -9,18 +13,8 @@
         "status": "moderator"
     },
     {
-        "name": "Андрій",
-        "password": "andrii_1",
-        "status": "admin"
-    },
-    {
         "name": "Сергій",
         "password": "serjey_1",
-        "status": "admin"
-    },
-    {
-        "name": "Вова",
-        "password": "vova_1",
         "status": "admin"
     },
     {
@@ -37,6 +31,11 @@
         "name": "Яна",
         "password": "jana_1",
         "status": "worker"
+    },
+    {
+        "name": "Вова",
+        "password": "vova_1",
+        "status": "admin"
     },
     {
         "name": "Галка",
