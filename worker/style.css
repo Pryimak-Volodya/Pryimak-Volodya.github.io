@@ -29,7 +29,6 @@ body{
     background-image: url(../img/bg_fon.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 img{
     width: 100%;
@@ -50,15 +49,27 @@ header {
     top: 0;
     left: 0;
 }
+#clock {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-family: Poppins-Regular;
+    color: black;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
 #exit {
     position: fixed;
+    float: right;
     top: 5px;
     right: 5px;
     border: 1px solid silver;
     border-radius: 15px;
     padding: 8px;
     color: black;
-    font-size: 2em;
+    font-size: 1.8em;
     font-family: Montserrat-Bold;
     box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
                 6px 8px 3px -1px rgba(128,128,128,1);
@@ -74,7 +85,7 @@ header h1 {
     font-weight: 100;
     padding: 20px;
 }
-#exit:hover, .addDeal:hover {
+#exit:hover, .addDeal:hover, .dell:hover, .send:hover {
     background-color: silver;
     cursor: pointer;
     transition: 0.3s;
@@ -148,7 +159,6 @@ li {
     font-size: 1.2em;
     font-family: Poppins-Regular;
 }
-
 input {
     display: inline-block;
     width: 20px;
@@ -179,17 +189,29 @@ input:checked + label {
     font-size: 1.2em;
     color: black;
 }
-.addDeal {
+.addDeal, .send {
     position: relative;
     top: 5px;
     right: 5px;
     border: 1px solid silver;
     border-radius: 15px;
     padding: 8px;
+    margin-left: 15px;
     color: black;
     font-size: 1em;
     font-family: Montserrat-Bold;
     box-shadow: 5px 2px 5px -1px rgba(128,128,128,1),
                 5px 6px 3px -1px rgba(128,128,128,1);
 }
-
+.dell {
+    position: relative;
+    left: 15px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 3px;
+    color: black;
+    font-size: 0.9em;
+    font-family: Montserrat-Bold;
+    box-shadow: 3px 1px 5px -1px rgba(128,128,128,1),
+                3px 4px 3px -1px rgba(128,128,128,1);
+}
