@@ -25,6 +25,12 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 /*--------------------*/
+body{
+    background-image: url(../img/bg_fon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
 img{
     width: 100%;
     display: block;
@@ -68,7 +74,7 @@ header h1 {
     font-weight: 100;
     padding: 20px;
 }
-#exit:hover, .deal:hover {
+#exit:hover, .addDeal:hover {
     background-color: silver;
     cursor: pointer;
     transition: 0.3s;
@@ -93,6 +99,7 @@ header h1 {
 .user {
     display: inline-block;
     position: relative;
+    background-color: white;
     width: 400px;
     height: 400px;
     margin: 20px;
@@ -107,7 +114,7 @@ header h1 {
     position: relative;
     width: auto;
     margin: 25px;
-
+    background-color: white;
     border: 1px solid silver;
     border-radius: 15px;
     box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
@@ -124,12 +131,12 @@ header h1 {
     border: 1px solid black;
     border-radius: 15px;
 }
-ol{
+ol {
     position: relative;
     padding: 30px;
     font-size: 1.2em;
 }
-ol h1{
+ol h1 {
     font-weight: 400;
     font-size: 2em;
     font-family: Poppins-Regular;
@@ -141,6 +148,7 @@ li {
     font-size: 1.2em;
     font-family: Poppins-Regular;
 }
+
 input {
     display: inline-block;
     width: 20px;
@@ -157,10 +165,21 @@ input + label{
     font-size: 1.2em;
     color: black;
 }
-input label:hover, input:checked + label{
+input:checked + label {
     font-weight: 600;
 }
-.deal {
+.edit {
+    display: block;
+    width: 50%;
+}
+.edit input{
+    width: 80%;
+    height: 16px;
+    padding: 15px;
+    font-size: 1.2em;
+    color: black;
+}
+.addDeal {
     position: relative;
     top: 5px;
     right: 5px;
