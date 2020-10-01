@@ -16,7 +16,7 @@ $(document).ready(function(){
             });
     })
 });
-//clock
+//  clock //
 function currentTime() {
     var date = new Date();
     var hour = date.getHours();
