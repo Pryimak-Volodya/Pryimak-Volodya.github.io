@@ -39,3 +39,15 @@ function authorization() {
 function profile_user() {
     alert('Увійшов : ' + user_name_entrance + '. Пароль : ' + user_password_entrance)
 }
+
+$(dropDown).on("click", function(){
+    $(select).slideDown();
+});
+$(".option").on("click", function(){
+
+$("#status").text($(this).text());
+
+
+    $(select).slideUp();
+
+});
