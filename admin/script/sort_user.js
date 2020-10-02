@@ -1,7 +1,6 @@
 window.onload = function () {
     clonv = $('ul').clone();
     $('.ul_user')[0].children[0].remove();
-    console.log(clonv)
 };
 $($('.edit_user_menu_2')[0]).children().on('click', user_list);
 function user_list() {
@@ -27,7 +26,19 @@ function user_list() {
         case 'Worker':
             work_user()
             break
-    }
+    };
+
+    lisr_user_button = Array.from(this.parentNode.children);
+    for (i = 0; i < lisr_user_button.length; i++) {
+        $($(lisr_user_button)[i]).css({
+            'border': '2px solid #6675df',
+            'color': '#6675df'
+        });
+    };
+    $(this).css({
+        'color': 'white',
+        'border': '2px solid white'
+    });
 };
 
 function all_user() {

@@ -148,9 +148,7 @@ body {
 }
 
 .edit_user_menu div span:hover {
-    background-color: #6675df;
-    color: white;
-    transition: 0.3s;
+    cursor: pointer;
 }
 
 .icons_user_for_adnim:hover {
