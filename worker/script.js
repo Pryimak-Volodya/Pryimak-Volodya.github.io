@@ -46,6 +46,7 @@ var JsonURL = '../list.json';
 
 console.log(listTo);
 console.log(inputTo);
+/*
 document.addEventListener("click", function () {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
@@ -64,6 +65,6 @@ document.addEventListener("click", function () {
         };
     xhr.send(JSON.stringify(listWorker));
 })
-
+*/
 
 
