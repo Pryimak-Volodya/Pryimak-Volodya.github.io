@@ -1,43 +1,217 @@
-* {
-    margin: 0;
+*{
     padding: 0;
-    overflow: hidden;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+}
+input,button,textarea{font-family:inherit;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+/*--------------------*/
+body{
+    background-image: url(../img/bg_fon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+img{
+    width: 100%;
+    display: block;
 }
 @font-face {
     font-family: Poppins-Regular;
-    src: url('./fonts/Courier\ New.ttf');
+    src: url('../fonts/Courier\Courier New.ttf');
 
 }
 @font-face {
     font-family: Montserrat-Bold;
-    src: url('./fonts/Montserrat-Bold.ttf');
+    src: url('../fonts/Montserrat-Bold.ttf');
 }
-p{
+header {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+}
+#clock {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-family: Poppins-Regular;
+    color: black;
     font-size: 2em;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+#exit {
+    position: fixed;
+    float: right;
+    top: 5px;
+    right: 5px;
+    border: 1px solid silver;
+    border-radius: 15px;
+    padding: 8px;
+    color: black;
+    font-size: 1.8em;
+    font-family: Montserrat-Bold;
+    box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
+                6px 8px 3px -1px rgba(128,128,128,1);
+}
+header h1 {
+    position: relative;
+    left: 40%;
+    font-size: 2.4em;
+    display: inline-block;
+    font-family: Poppins-Regular;
+    color: black;
+    text-align: center;
+    font-weight: 100;
+    padding: 20px;
+}
+#exit:hover, .addDeal:hover, .dell:hover, .send:hover {
+    background-color: silver;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#exit {
+    transition: 0.3s;
+    outline: none;
+}
+.user p{
+    font-size: 3em;
+    font-family: Poppins-Regular;
+    font-weight: 500;
+    padding: 5px;
+}
+.user span {
+    display: block;
+    font-size: 2em;
+    font-family: Poppins-Regular;
+    padding: 10px 5px;
+    text-align: left;
 }
 .user {
     display: inline-block;
     position: relative;
-    width: 500px;
-    height: 500px;
-    margin: 15px;
-    background-color: #1ea8d2;
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    border: 1px solid silver;
     text-align: center;
     border-radius: 15px;
+    box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
+                6px 8px 3px -1px rgba(128,128,128,1);
 }
 .listSprav {
-    margin: 15px;
     display: inline-block;
     position: relative;
-    width: 500px;
-    height: 500px;
-    margin: 15px;
-    background-color: #666666;
+    width: auto;
+    margin: 25px;
+    background-color: white;
+    border: 1px solid silver;
     border-radius: 15px;
+    box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
+                6px 8px 3px -1px rgba(128,128,128,1);
 }
 .fotoUser {
     position: relative;
-    width: 200px;
-    height: 200px;
-    background-image: url(./img/worker.jpg);
+    width: 50%;
+    height: 50%;
+    margin: 10px auto;
+    background-image: url(../img/worker.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+ol {
+    position: relative;
+    padding: 30px;
+    font-size: 1.2em;
+}
+ol h1 {
+    font-weight: 400;
+    font-size: 2em;
+    font-family: Poppins-Regular;
+    margin-left: 15px;
+    cursor: default;
+}
+li {
+    margin: 15px;
+    font-size: 1.2em;
+    font-family: Poppins-Regular;
+}
+input {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+input + label{
+    position: relative;
+    display: inline-block;
+    margin: 5px ;
+    font-size: 1.2em;
+    color: black;
+}
+input:checked + label {
+    font-weight: 600;
+}
+.edit {
+    display: block;
+    width: 50%;
+}
+.edit input{
+    width: 80%;
+    height: 16px;
+    padding: 15px;
+    font-size: 1.2em;
+    color: black;
+}
+.addDeal, .send {
+    position: relative;
+    top: 5px;
+    right: 5px;
+    border: 1px solid silver;
+    border-radius: 15px;
+    padding: 8px;
+    margin-left: 15px;
+    color: black;
+    font-size: 1em;
+    font-family: Montserrat-Bold;
+    box-shadow: 5px 2px 5px -1px rgba(128,128,128,1),
+                5px 6px 3px -1px rgba(128,128,128,1);
+}
+.dell {
+    position: relative;
+    left: 15px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 3px;
+    color: black;
+    font-size: 0.9em;
+    font-family: Montserrat-Bold;
+    box-shadow: 3px 1px 5px -1px rgba(128,128,128,1),
+                3px 4px 3px -1px rgba(128,128,128,1);
 }
