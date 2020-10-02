@@ -37,3 +37,33 @@ function updateTime(k) {
     }
 }
 currentTime();
+//TO_JSON//
+
+var listTo = document.getElementsByTagName("label");
+var inputTo = document.getElementsByTagName("input");
+var JsonURL = '../list.json';
+
+
+console.log(listTo);
+console.log(inputTo);
+document.addEventListener("click", function () {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            let allResp = JSON.parse(xhr.responseText)
+            }
+    }
+    xhr.open(
+        'POST',
+        JsonURL,
+        );
+    const listWorker = {
+        "li1": "task1",
+        "li2": "task1",
+        "li3": "task1",
+        };
+    xhr.send(JSON.stringify(listWorker));
+})
+
+
+
