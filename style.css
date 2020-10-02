@@ -153,3 +153,7 @@ label {
     transition: 0.3s;
     outline: none;
 }
+.select
+{
+    width: 100%;
+}
