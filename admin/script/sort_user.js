@@ -100,7 +100,7 @@ function moderator_user() {
     number_moder = 0;
 
     for (g = 0; g < person.length; g++) {
-        if (person[g].status == 'moderator') {
+        if (person[g].status == 'chief') {
             $(clonv).clone().appendTo($('.ul_user'));
 
             lisr_moder = Array.from($('.ul_user')[0].children[number_moder].children[0].children);
