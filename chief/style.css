@@ -111,6 +111,7 @@ header h1 {
     display: inline-block;
     position: relative;
     background-color: white;
+    float: left;
     width: 400px;
     height: 400px;
     margin: 20px;
@@ -123,6 +124,7 @@ header h1 {
 .listSprav {
     display: inline-block;
     position: relative;
+    float: left;
     width: auto;
     margin: 25px;
     background-color: white;
@@ -136,7 +138,7 @@ header h1 {
     width: 50%;
     height: 50%;
     margin: 10px auto;
-    background-image: url(../img/worker.jpg);
+    background-image: url(../img/chief.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     border: 1px solid black;

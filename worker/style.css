@@ -111,6 +111,7 @@ header h1 {
     display: inline-block;
     position: relative;
     background-color: white;
+    float: left;
     width: 400px;
     height: 400px;
     margin: 20px;
@@ -124,6 +125,7 @@ header h1 {
     display: inline-block;
     position: relative;
     width: auto;
+    float: left;
     margin: 25px;
     background-color: white;
     border: 1px solid silver;
@@ -178,18 +180,7 @@ input + label{
 input:checked + label {
     font-weight: 600;
 }
-.edit {
-    display: block;
-    width: 50%;
-}
-.edit input{
-    width: 80%;
-    height: 16px;
-    padding: 15px;
-    font-size: 1.2em;
-    color: black;
-}
-.addDeal, .send {
+.send {
     position: relative;
     top: 5px;
     right: 5px;
@@ -203,15 +194,4 @@ input:checked + label {
     box-shadow: 5px 2px 5px -1px rgba(128,128,128,1),
                 5px 6px 3px -1px rgba(128,128,128,1);
 }
-.dell {
-    position: relative;
-    left: 15px;
-    border: 1px solid silver;
-    border-radius: 5px;
-    padding: 3px;
-    color: black;
-    font-size: 0.9em;
-    font-family: Montserrat-Bold;
-    box-shadow: 3px 1px 5px -1px rgba(128,128,128,1),
-                3px 4px 3px -1px rgba(128,128,128,1);
-}
+
