@@ -5,7 +5,6 @@ $(document).ready(function(){
     var worker = "worker/index.html";
     var admin = "admin/index.html";
 
-
 $.ajax({
     url: './user.json',
     method: 'get',
