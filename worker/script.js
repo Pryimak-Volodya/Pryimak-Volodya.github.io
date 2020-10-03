@@ -46,6 +46,16 @@ var JsonURL = '../list.json';
 
 console.log(listTo);
 console.log(inputTo);
+
+$.ajax({
+    url: '../lost.json',
+    method: 'get',
+    async: false,
+    dataType: 'html',
+    success: function (name) {
+        person = JSON.parse(name);
+    }
+});
 /*
 document.addEventListener("click", function () {
     var xhr = new XMLHttpRequest();
