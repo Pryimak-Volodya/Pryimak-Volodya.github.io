@@ -31,7 +31,7 @@ function authorization() {
     if (status_of_user == "worker") link = link_worker;
     if (status_of_user == "admin") link = link_admin;
     console.log(status_of_user);
-    // user dataBase
+    
     user_dataBase = person;
     // ----------------------- робоча авторизація але статуc працівника через select ------------------------
     // for (i = 0; i < person.length; i++) {
