@@ -17,7 +17,7 @@ $.ajax({
 });
 $('#enter').on('click', authorization);
 function authorization() {
-    // user entrance
+   
     user_name_entrance = $('#name').val();
     user_password_entrance = $('#password').val()
     user_status_entrance = $('#status').text();
