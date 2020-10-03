@@ -1,10 +1,10 @@
 $(document).ready(function(){
     $('body').css("display", "none").fadeIn(1000);
     var golovna = "index.html";
-    var chief = "chief/index.html";
-    var worker = "worker/index.html";
-    var admin = "admin/index.html";
-
+    var link_chief = "chief/index.html";
+    var link_worker = "worker/index.html";
+    var link_admin = "admin/index.html";
+    var link;
 
 $.ajax({
     url: './user.json',
@@ -21,6 +21,16 @@ function authorization() {
     user_name_entrance = $('#name').val();
     user_password_entrance = $('#password').val()
     user_status_entrance = $('#status').text();
+    options = $("p.option");
+    let status_of_user;
+    for (var i = 0;i <= options.length; i++)
+    {
+        if (user_status_entrance == $(options[i]).text()) status_of_user = options[i].id;
+    }
+    if (status_of_user == "chief") link = link_chief;
+    if (status_of_user == "worker") link = link_worker;
+    if (status_of_user == "admin") link = link_admin;
+    console.log(status_of_user);
     // user dataBase
     user_dataBase = person;
     // ----------------------- робоча авторизація але статуc працівника через select ------------------------
@@ -44,10 +54,10 @@ function authorization() {
 }
 function profile_user() {
   //  alert('Увійшов : ' + user_name_entrance + '. Пароль : ' + user_password_entrance);
-    console.log(user_status_entrance);
+   // console.log(user_status_entrance);
     $("body").fadeOut(1000, redirect);
     function redirect() {
-        $(location).attr('href', admin);
+       $(location).attr('href', link);
     }
 }
 
