@@ -1,3 +1,11 @@
+$(document).ready(function(){
+    $('body').css("display", "none").fadeIn(1000);
+    var golovna = "index.html";
+    var chief = "chief/index.html";
+    var worker = "worker/index.html";
+    var admin = "admin/index.html";
+
+
 $.ajax({
     url: './user.json',
     method: 'get',
@@ -12,7 +20,7 @@ function authorization() {
     // user entrance
     user_name_entrance = $('#name').val();
     user_password_entrance = $('#password').val()
-    user_status_entrance = $('#status').val();
+    user_status_entrance = $('#status').text();
 
     // user dataBase
     user_dataBase = person;
@@ -27,27 +35,34 @@ function authorization() {
     //         return;
     //     }
     // }
-
     // ---------------------- test варіант під теперішню форму
     for (i = 0; i < person.length; i++) {
-        if (user_dataBase[i].name == user_name_entrance && user_dataBase[i].password == user_password_entrance) {
+        if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
+
             return profile_user();
         }
     }
     return alert('Заповни правильно дані');
 }
 function profile_user() {
-    alert('Увійшов : ' + user_name_entrance + '. Пароль : ' + user_password_entrance)
+  //  alert('Увійшов : ' + user_name_entrance + '. Пароль : ' + user_password_entrance);
+    console.log(user_status_entrance);
+    $("body").fadeOut(1000, redirect);
+    function redirect() {
+        $(location).attr('href', admin);
+    }
+
+
 }
 
-$(dropDown).on("click", function(){
-    $(select).slideDown();
+$('.user_status').on("click", function(){
+    $(select).slideDown()
 });
 $(".option").on("click", function(){
 
 $("#status").text($(this).text());
 
-
     $(select).slideUp();
 
+});
 });

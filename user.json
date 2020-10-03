@@ -18,9 +18,9 @@
         "status": "admin"
     },
     {
-        "name": "Перто",
-        "password": "petro_1",
-        "status": "worker"
+        "name": "admin",
+        "password": "admin",
+        "status": "admin"
     },
     {
         "name": "Микола",

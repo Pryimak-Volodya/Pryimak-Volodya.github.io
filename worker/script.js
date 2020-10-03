@@ -53,7 +53,7 @@ $.ajax({
     async: false,
     dataType: 'html',
     success: function (name) {
-        person = JSON.parse(name);
+        list = JSON.parse(name);
     }
 });
 /*
