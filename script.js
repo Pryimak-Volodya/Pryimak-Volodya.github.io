@@ -37,7 +37,6 @@ function authorization() {
     // ---------------------- test варіант під теперішню форму
     for (i = 0; i < person.length; i++) {
         if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
-
             return profile_user();
         }
     }
@@ -50,8 +49,6 @@ function profile_user() {
     function redirect() {
         $(location).attr('href', admin);
     }
-
-
 }
 
 $('.user_status').on("click", function(){
