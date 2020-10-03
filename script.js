@@ -21,7 +21,6 @@ function authorization() {
     user_name_entrance = $('#name').val();
     user_password_entrance = $('#password').val()
     user_status_entrance = $('#status').text();
-
     // user dataBase
     user_dataBase = person;
     // ----------------------- робоча авторизація але статуc працівника через select ------------------------
