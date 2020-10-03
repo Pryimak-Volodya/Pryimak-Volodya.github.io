@@ -1,9 +1,9 @@
 $(document).ready(function(){
     $('body').css("display", "none").fadeIn(1000);
     var golovna = "index.html";
-    var chief = "chief/index.html";
-    var worker = "worker/index.html";
-    var admin = "admin/index.html";
+    var link_chief = "chief/index.html";
+    var link_worker = "worker/index.html";
+    var link_admin = "admin/index.html";
 
 $.ajax({
     url: './user.json',
