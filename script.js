@@ -4,6 +4,7 @@ $(document).ready(function(){
     var link_chief = "chief/index.html";
     var link_worker = "worker/index.html";
     var link_admin = "admin/index.html";
+    var link;
 
 $.ajax({
     url: './user.json',
@@ -57,10 +58,9 @@ function profile_user() {
     console.log(user_status_entrance);
     $("body").fadeOut(1000, redirect);
     function redirect() {
-        $(location).attr('href', admin);
+        $(location).attr('href', link);
     }
 }
-
 $('.user_status').on("click", function(){
     $(select).slideDown()
 });
@@ -69,6 +69,5 @@ $(".option").on("click", function(){
 $("#status").text($(this).text());
 
     $(select).slideUp();
-
 });
 });
