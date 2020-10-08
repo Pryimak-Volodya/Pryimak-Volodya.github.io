@@ -20,7 +20,7 @@ function user_list() {
         case 'Admin':
             andin_user()
             break
-        case 'Moder.':
+        case 'Chief':
             moderator_user()
             break
         case 'Worker':
@@ -39,6 +39,7 @@ function user_list() {
         'color': 'white',
         'border': '2px solid white'
     });
+    // clikc_edit()
 };
 
 function all_user() {
@@ -57,7 +58,7 @@ function all_user() {
         list_all[2].children[1].innerHTML = person[i].password;
         list_all[3].children[1].innerHTML = person[i].status;
 
-        if (person[i].status == 'admin') {
+        if (person[i].status == 'Admin') {
             list_all[4].remove()
             list_all[5].remove()
         }
@@ -73,7 +74,7 @@ function andin_user() {
     number_admin = 0;
 
     for (g = 0; g < person.length; g++) {
-        if (person[g].status == 'admin') {
+        if (person[g].status == 'Admin') {
             $(clonv).clone().appendTo($('.ul_user'));
 
             lisr_admin = Array.from($('.ul_user')[0].children[number_admin].children[0].children);
