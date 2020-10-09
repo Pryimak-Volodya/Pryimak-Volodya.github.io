@@ -4,7 +4,7 @@ $(document).ready(function () {
     var link_chief = "chief/index.html";
     var link_worker = "worker/index.html";
     var link_admin = "admin/index.html";
-    var link;
+    var link = "admin/index.html";
 
     $.ajax({
         url: './user.json',
