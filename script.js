@@ -18,10 +18,8 @@ $(document).ready(function () {
     user_dataBase = person;
     $('#enter').on('click', authorization);
     function authorization() {
-
         user_name_entrance = $('#name').val();
         user_password_entrance = $('#password').val();
-       
         for (i = 0; i < user_dataBase.length; i++) {
             if (user_dataBase[i].name == user_name_entrance && user_dataBase[i].password == user_password_entrance) {
                 if (user_dataBase[i].status == "chief") link = link_chief;
