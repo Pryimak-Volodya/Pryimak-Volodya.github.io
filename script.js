@@ -19,20 +19,20 @@ $(document).ready(function () {
     function authorization() {
         user_name_entrance = $('#name').val();
         user_password_entrance = $('#password').val()
-        for (i = 0; i < person.length; i++) {
+      //  for (i = 0; i < person.length; i++) {
             if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
             //    if (user_dataBase[i].status === "chief") link = link_chief;
             //    if (user_dataBase[i].status === "worker") link = link_worker;
              //   if (user_dataBase[i].status === "Admin") link = link_admin;
                 return profile_user();
-            }
+       //     }
         }
         return alert('Помилка входу')
     }
     function profile_user() {
         $("body").fadeOut(1000, redirect);
         function redirect() {
-            $(location).attr('href', link);
+            $(location).attr('href', link_admin);
         }
     }
     $('.user_status').on("click", function () {
