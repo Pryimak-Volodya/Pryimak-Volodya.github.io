@@ -15,6 +15,21 @@ $(document).ready(function(){
              $(th).remove('.dial');
             });
     })
+
+    $.ajax({
+        url: '../user.json',
+        method: 'get',
+        async: false,
+        dataType: 'html',
+        success: function (name) {
+            person = JSON.parse(name);
+        }
+    });
+    user_dataBase = person;
+
+    $('#chiefrName').text(user_dataBase.name);
+
+
 });
 //  clock //
 function currentTime() {
