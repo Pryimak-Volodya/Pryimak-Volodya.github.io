@@ -15,15 +15,18 @@ $(document).ready(function () {
             person = JSON.parse(name);
         }
     });
+
     $('#enter').on('click', authorization);
     function authorization() {
+        user_dataBase = person;
         user_name_entrance = $('#name').val();
         user_password_entrance = $('#password').val()
         for (i = 0; i < person.length; i++) {
             if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
-                if (person[i].status == "chief") link = link_chief;
-                if (person[i].status == "worker") link = link_worker;
-                if (person[i].status == "Admin") link = link_admin;
+                if (user_dataBase[i].status === "chief") link = link_chief;
+                if (user_dataBase[i].status === "worker") link = link_worker;
+                if (user_dataBase[i].status === "admin") link = link_admin;
+                console.log(user_dataBase[i].status);
                 return profile_user();
             }
         }
