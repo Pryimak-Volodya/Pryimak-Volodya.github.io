@@ -30,7 +30,7 @@ $(document).ready(function () {
             }
         }
         return alert('Помилка входу')
-    };
+    }
     function profile_user() {
         $("body").fadeOut(1000, redirect);
         function redirect() {
