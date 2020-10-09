@@ -17,22 +17,18 @@ $(document).ready(function () {
     });
     $('#enter').on('click', authorization);
     function authorization() {
-
         user_name_entrance = $('#name').val();
         user_password_entrance = $('#password').val()
-        user_status_entrance = $('#status').text();
-        options = $("p.option");
-        user_dataBase = person;
         for (i = 0; i < person.length; i++) {
-            if (user_dataBase[i].name == user_name_entrance && user_dataBase[i].password == user_password_entrance && user_dataBase[i].status == user_status_entrance) {
-                if (user_status_entrance == "chief") link = link_chief;
-                if (user_status_entrance == "worker") link = link_worker;
-                if (user_status_entrance == "Admin") link = link_admin;
+            if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
+                if (person[i].status == "chief") link = link_chief;
+                if (person[i].status == "worker") link = link_worker;
+                if (person[i].status == "Admin") link = link_admin;
                 return profile_user();
-            };
+            }
         }
-        alert('Помилка входу')
-    }
+        return alert('Помилка входу')
+    };
     function profile_user() {
         $("body").fadeOut(1000, redirect);
         function redirect() {
