@@ -4,7 +4,7 @@ $(document).ready(function () {
     var link_chief = "chief/index.html";
     var link_worker = "worker/index.html";
     var link_admin = "admin/index.html";
-    var link = "admin/index.html";
+    var link;
 
     $.ajax({
         url: './user.json',
@@ -19,20 +19,20 @@ $(document).ready(function () {
     function authorization() {
         user_name_entrance = $('#name').val();
         user_password_entrance = $('#password').val()
-      //  for (i = 0; i < person.length; i++) {
+        for (i = 0; i < person.length; i++) {
             if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
-            //    if (user_dataBase[i].status === "chief") link = link_chief;
-            //    if (user_dataBase[i].status === "worker") link = link_worker;
-             //   if (user_dataBase[i].status === "Admin") link = link_admin;
+                if (person[i].status == "chief") link = link_chief;
+                if (person[i].status == "worker") link = link_worker;
+                if (person[i].status == "Admin") link = link_admin;
                 return profile_user();
-       //     }
+            }
         }
         return alert('Помилка входу')
-    }
+    };
     function profile_user() {
         $("body").fadeOut(1000, redirect);
         function redirect() {
-            $(location).attr('href', link_admin);
+            $(location).attr('href', link);
         }
     }
     $('.user_status').on("click", function () {
