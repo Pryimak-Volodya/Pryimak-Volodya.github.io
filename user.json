@@ -1,7 +1,7 @@
 [{
         "name": "Андрій",
         "password": "andrii_1",
-        "status": "Admin"
+        "status": "admin"
     }, {
         "name": "Ростислав",
         "password": "rostyslav_1",
@@ -15,12 +15,12 @@
     {
         "name": "Сергій",
         "password": "serjey_1",
-        "status": "Admin"
+        "status": "admin"
     },
     {
         "name": "Admin",
         "password": "Admin",
-        "status": "Admin"
+        "status": "admin"
     },
     {
         "name": "Микола",
@@ -35,7 +35,7 @@
     {
         "name": "Вова",
         "password": "vova_1",
-        "status": "Admin"
+        "status": "admin"
     },
     {
         "name": "Галка",

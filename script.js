@@ -5,7 +5,7 @@ $(document).ready(function () {
     var link_worker = "worker/index.html";
     var link_admin = "admin/index.html";
     var link;
-
+   
     $.ajax({
         url: './user.json',
         method: 'get',
@@ -17,13 +17,15 @@ $(document).ready(function () {
     });
     $('#enter').on('click', authorization);
     function authorization() {
+        user_dataBase = person;
         user_name_entrance = $('#name').val();
-        user_password_entrance = $('#password').val()
-        for (i = 0; i < person.length; i++) {
+        user_password_entrance = $('#password').val();
+       
+        for (i = 0; i < user_dataBase.length; i++) {
             if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
-                if (person[i].status == "chief") link = link_chief;
-                if (person[i].status == "worker") link = link_worker;
-                if (person[i].status == "Admin") link = link_admin;
+                if (user_dataBase[i].status == "chief") link = link_chief;
+                if (user_dataBase[i].status == "worker") link = link_worker;
+                if (user_dataBase[i].status == "Admin") link = link_admin;
                 return profile_user();
             }
         }
