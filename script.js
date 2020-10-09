@@ -15,7 +15,6 @@ $(document).ready(function () {
             person = JSON.parse(name);
         }
     });
-
     $('#enter').on('click', authorization);
     function authorization() {
         user_dataBase = person;
@@ -31,7 +30,7 @@ $(document).ready(function () {
             }
         }
         return alert('Помилка входу')
-    };
+    }
     function profile_user() {
         $("body").fadeOut(1000, redirect);
         function redirect() {
