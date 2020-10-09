@@ -18,8 +18,8 @@
         "status": "admin"
     },
     {
-        "name": "Admin",
-        "password": "Admin",
+        "name": "admin",
+        "password": "admin",
         "status": "admin"
     },
     {

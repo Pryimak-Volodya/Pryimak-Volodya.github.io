@@ -15,6 +15,7 @@ $(document).ready(function () {
             person = JSON.parse(name);
         }
     });
+
     $('#enter').on('click', authorization);
     function authorization() {
         user_dataBase = person;
