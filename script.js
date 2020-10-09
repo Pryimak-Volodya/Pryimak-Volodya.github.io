@@ -21,9 +21,9 @@ $(document).ready(function () {
         user_password_entrance = $('#password').val()
         for (i = 0; i < person.length; i++) {
             if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
-                if (user_dataBase[i].status === "chief") link = link_chief;
-                if (user_dataBase[i].status === "worker") link = link_worker;
-                if (user_dataBase[i].status === "Admin") link = link_admin;
+            //    if (user_dataBase[i].status === "chief") link = link_chief;
+            //    if (user_dataBase[i].status === "worker") link = link_worker;
+             //   if (user_dataBase[i].status === "Admin") link = link_admin;
                 return profile_user();
             }
         }
