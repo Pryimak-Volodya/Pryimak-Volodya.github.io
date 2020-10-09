@@ -26,9 +26,7 @@ $(document).ready(function(){
         }
     });
     user_dataBase = person;
-
     $('#chiefrName').text(user_dataBase.name);
-
 
 });
 //  clock //
