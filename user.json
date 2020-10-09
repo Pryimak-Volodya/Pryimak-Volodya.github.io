@@ -18,9 +18,9 @@
         "status": "Admin"
     },
     {
-        "name": "Admin",
-        "password": "Admin",
-        "status": "Admin"
+        "name": "admin",
+        "password": "admin",
+        "status": "admin"
     },
     {
         "name": "Микола",
