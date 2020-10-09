@@ -56,6 +56,8 @@ $.ajax({
         list = JSON.parse(name);
     }
 });
+
+
 /*
 document.addEventListener("click", function () {
     var xhr = new XMLHttpRequest();
