@@ -59,7 +59,9 @@ function getPosition(){
         if (user_dataBase[i].name === "Ростислав")
             post = user_dataBase[i].position;
     }
+    $('#position').append("<i>"+post+"</i>");
 }
+
 getPosition();
 console.log(post);
 console.log(list);
