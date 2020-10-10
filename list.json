@@ -1,4 +1,11 @@
+[
 {
-  "listWorker": {
-  }
+  "admin": 
+    {
+      "delo1": true,
+      "delo2":false,
+      "delo3":false
+    },
+
 }
+]

@@ -1,4 +1,6 @@
+/*import { goto } from " ../script.js";*/
 $(document).ready(function(){
+    console.log(goto);
     $('body').css("display", "none").fadeIn(1000);
     var golovna = "../index.html";
 
