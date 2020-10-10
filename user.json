@@ -5,7 +5,8 @@
     }, {
         "name": "Ростислав",
         "password": "rostyslav_1",
-        "status": "worker"
+        "status": "worker",
+        "position": "Перший куда потрібно"
     },
     {
         "name": "Рома",
@@ -20,7 +21,8 @@
     {
         "name": "admin",
         "password": "admin",
-        "status": "admin"
+        "status": "admin",
+        "position": "Administrator"
     },
     {
         "name": "Микола",
