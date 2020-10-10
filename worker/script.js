@@ -55,9 +55,10 @@ $.ajax({
 user_dataBase = list;
 function getPosition(){
     for  (i = 0; i < user_dataBase.length; i++) {
-        if (user_dataBase[i].name === "Ростислав")
+        if (user_dataBase[i].online) {
             WorkerPost = user_dataBase[i].position;
             WorkerName = user_dataBase[i].name;
+        }
     }
     $('#workerName').append("<i>"+WorkerName+"</i>");
     $('#position').append("<i>"+WorkerPost+"</i>");

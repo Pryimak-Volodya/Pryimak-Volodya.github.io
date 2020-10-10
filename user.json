@@ -7,7 +7,7 @@
         "name": "Ростислав",
         "password": "rostyslav_1",
         "status": "worker",
-        "online":false,
+        "online":true,
         "position": "Перший куда потрібно"
     },
     {
