@@ -41,42 +41,28 @@ currentTime();
 
 var listTo = document.getElementsByTagName("label");
 var inputTo = document.getElementsByTagName("input");
-var JsonURL = '../list.json';
+var user_name_entrance;
 
-
-console.log(listTo);
-console.log(inputTo);
 
 $.ajax({
-    url: '../lost.json',
+    url: '../user.json',
     method: 'get',
     async: false,
     dataType: 'html',
-    success: function (name) {
-        list = JSON.parse(name);
+    success: function (position) {
+        list = JSON.parse(position);
     }
 });
-
-
-/*
-document.addEventListener("click", function () {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            let allResp = JSON.parse(xhr.responseText)
-            }
+user_dataBase = list;
+function getPosition(){
+    for  (i = 0; i < user_dataBase.length; i++) {
+        if (user_dataBase[i].name === "Ростислав")
+            post = user_dataBase[i].position;
     }
-    xhr.open(
-        'POST',
-        JsonURL,
-        );
-    const listWorker = {
-        "li1": "task1",
-        "li2": "task1",
-        "li3": "task1",
-        };
-    xhr.send(JSON.stringify(listWorker));
-})
-*/
+}
+getPosition();
+console.log(post);
+console.log(list);
+
 
 
