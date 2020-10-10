@@ -1,6 +1,4 @@
-/*import { goto } from " ../script.js";*/
 $(document).ready(function(){
-    console.log(goto);
     $('body').css("display", "none").fadeIn(1000);
     var golovna = "../index.html";
 
@@ -45,7 +43,6 @@ var listTo = document.getElementsByTagName("label");
 var inputTo = document.getElementsByTagName("input");
 var user_name_entrance;
 
-
 $.ajax({
     url: '../user.json',
     method: 'get',
@@ -63,10 +60,8 @@ function getPosition(){
     }
     $('#position').append("<i>"+post+"</i>");
 }
-
 getPosition();
-console.log(post);
-console.log(list);
+
 
 
 
