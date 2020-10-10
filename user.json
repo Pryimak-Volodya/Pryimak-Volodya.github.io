@@ -7,7 +7,8 @@
         "name": "Ростислав",
         "password": "rostyslav_1",
         "status": "worker",
-        "online":false
+        "online":false,
+        "position": "Перший куда потрібно"
     },
     {
         "name": "Рома",
@@ -25,7 +26,8 @@
         "name": "admin",
         "password": "admin",
         "status": "admin",
-        "online":false
+        "online":false,
+        "position": "Administrator"
     },
     {
         "name": "Микола",
