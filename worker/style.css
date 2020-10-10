@@ -26,9 +26,8 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 /*--------------------*/
 body{
-    background-image: url(../img/bg_fon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url(../img/bg_fon1.jpg) no-repeat;
+    background-size: contain;
 }
 img{
     width: 100%;
@@ -43,11 +42,23 @@ img{
     font-family: Montserrat-Bold;
     src: url('../fonts/Montserrat-Bold.ttf');
 }
+.block_bg {
+    position: absolute;
+    width: 60vw;
+    height: 100%;
+    background: url(../img/bg-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 40%;
+    z-index: 1;
+}
 header {
     position: relative;
     display: block;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 #clock {
     position: fixed;
@@ -59,6 +70,10 @@ header {
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
+    border: #666666 solid 1px;
+    border-radius: 10px;
+    box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
+    6px 8px 3px -1px rgba(128,128,128,1);
 }
 #exit {
     position: fixed;
@@ -76,14 +91,20 @@ header {
 }
 header h1 {
     position: relative;
-    left: 40%;
+    left: 45%;
     font-size: 2.4em;
     display: inline-block;
     font-family: Poppins-Regular;
+    background-color: white;
+    border: 1px solid #666666;
+    border-radius: 15px;
     color: black;
     text-align: center;
     font-weight: 100;
     padding: 20px;
+    z-index: 2;
+    box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
+    6px 8px 3px -1px rgba(128,128,128,1);
 }
 #exit:hover, .addDeal:hover, .dell:hover, .send:hover {
     background-color: silver;
@@ -104,7 +125,7 @@ header h1 {
     display: block;
     font-size: 2em;
     font-family: Poppins-Regular;
-    padding: 10px 5px;
+    padding: 15px 5px;
     text-align: left;
 }
 .user {
@@ -113,13 +134,14 @@ header h1 {
     background-color: white;
     float: left;
     width: 400px;
-    height: 400px;
+    height: 370px;
     margin: 20px;
-    border: 1px solid silver;
+    border: 1px solid #666666;
     text-align: center;
     border-radius: 15px;
     box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
                 6px 8px 3px -1px rgba(128,128,128,1);
+    z-index: 2;
 }
 .listSprav {
     display: inline-block;
@@ -128,10 +150,11 @@ header h1 {
     float: left;
     margin: 25px;
     background-color: white;
-    border: 1px solid silver;
+    border: 1px solid #666666;
     border-radius: 15px;
     box-shadow: 6px 3px 5px -1px rgba(128,128,128,1),
                 6px 8px 3px -1px rgba(128,128,128,1);
+    z-index: 2;
 }
 .fotoUser {
     position: relative;
@@ -148,6 +171,7 @@ ol {
     position: relative;
     padding: 30px;
     font-size: 1.2em;
+    z-index: 2;
 }
 ol h1 {
     font-weight: 400;
