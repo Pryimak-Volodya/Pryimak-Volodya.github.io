@@ -24,8 +24,8 @@ $(document).ready(function () {
             if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
                 if (user_dataBase[i].status === "chief") link = link_chief;
                 if (user_dataBase[i].status === "worker") link = link_worker;
-                if (user_dataBase[i].status === "admin") link = link_admin;\
-
+                if (user_dataBase[i].status === "admin") link = link_admin;
+                
                /*export function goto() {
                    // return user_dataBase[i].name;
                    console.log(true);
