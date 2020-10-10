@@ -56,9 +56,11 @@ user_dataBase = list;
 function getPosition(){
     for  (i = 0; i < user_dataBase.length; i++) {
         if (user_dataBase[i].name === "Ростислав")
-            post = user_dataBase[i].position;
+            WorkerPost = user_dataBase[i].position;
+            WorkerName = user_dataBase[i].name;
     }
-    $('#position').append("<i>"+post+"</i>");
+    $('#workerName').append("<i>"+WorkerName+"</i>");
+    $('#position').append("<i>"+WorkerPost+"</i>");
 }
 getPosition();
 
