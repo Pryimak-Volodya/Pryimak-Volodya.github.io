@@ -46,10 +46,8 @@ img{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    left: 0;
     filter: blur(3px);
     z-index: 1;
-    
 }
 header {
     position: relative;
@@ -71,6 +69,7 @@ header {
     padding: 2px;
     border: #666666 solid 1px;
     border-radius: 10px;
+
 }
 #exit {
     position: fixed;

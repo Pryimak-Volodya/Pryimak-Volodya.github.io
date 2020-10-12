@@ -1,41 +1,53 @@
-$.ajax({
-    url: './user.json',
-    method: 'get',
-    async: false,
-    dataType: 'html',
-    success: function (name) {
-        person = JSON.parse(name);
-    }
-});
-$('#enter').on('click', authorization);
-function authorization() {
-    // user entrance
-    user_name_entrance = $('#name').val();
-    user_password_entrance = $('#password').val()
-    user_status_entrance = $('#status').val();
-
-    // user dataBase
+$(document).ready(function () {
+    $('body').css("display", "none").fadeIn(1000);
+    var golovna = "index.html";
+    var link_chief = "chief/index.html";
+    var link_worker = "worker/index.html";
+    var link_admin = "admin/index.html";
+    var link;
+   
+    $.ajax({
+        url: './user.json',
+        method: 'get',
+        async: false,
+        dataType: 'html',
+        success: function (name) {
+            person = JSON.parse(name);
+        }
+    });
     user_dataBase = person;
-    // ----------------------- робоча авторизація але статуc працівника через select ------------------------
-    // for (i = 0; i < person.length; i++) {
-    //     if (user_dataBase[i].name == user_name_entrance && user_dataBase[i].password == user_password_entrance && user_dataBase[i].status == user_status_entrance) {
-    //         alert('Увійшов : ' + user_name_entrance + ' - ' + user_status_entrance)
-    //         return;
-    //     }
-    //     else {
-    //         alert('Заповни правильно дані');
-    //         return;
-    //     }
-    // }
-
-    // ---------------------- test варіант під теперішню форму
-    for (i = 0; i < person.length; i++) {
-        if (user_dataBase[i].name == user_name_entrance && user_dataBase[i].password == user_password_entrance) {
-            return profile_user();
+    $('#enter').on('click', authorization);
+    function authorization() {
+        user_name_entrance = $('#name').val();
+        user_password_entrance = $('#password').val();
+        for (i = 0; i < user_dataBase.length; i++) {
+            if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
+                if (user_dataBase[i].status === "chief") link = link_chief;
+                if (user_dataBase[i].status === "worker") link = link_worker;
+                if (user_dataBase[i].status === "admin") link = link_admin;
+                
+               /*export function goto() {
+                   // return user_dataBase[i].name;
+                   console.log(true);
+                }*/
+                return profile_user();
+            }
+        }
+        return alert('Помилка входу');
+    }
+    function profile_user() {
+        $("body").fadeOut(1000, redirect);
+        function redirect() {
+            $(location).attr('href', link);
         }
     }
-    return alert('Заповни правильно дані');
-}
-function profile_user() {
-    alert('Увійшов : ' + user_name_entrance + '. Пароль : ' + user_password_entrance)
-}
+    $('.user_status').on("click", function () {
+        $(select).slideDown()
+    });
+    $(".option").on("click", function () {
+
+        $("#status").text($(this).text());
+
+        $(select).slideUp();
+    });
+});

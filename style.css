@@ -153,3 +153,43 @@ label {
     transition: 0.3s;
     outline: none;
 }
+.select
+{
+    width: 100%;
+}
+div.status_user span:last-child
+{
+    float: right;
+    cursor: pointer;
+}
+
+div.status_user
+{
+    padding: 5px;
+    font-size: 1.3em;
+    color: #666666;
+    line-height: 1.2;
+}
+div.user_status:hover
+{
+background: #dbdbdb ;
+cursor: default;
+
+}
+div.user_status
+{
+    transition-duration: 0.5s;
+}
+div.status_user div.select p.option
+{
+    background: #f4f4f4 ;
+    cursor: pointer;
+}
+div.status_user div.select p.option:hover
+{
+    background:#dbdbdb; 
+}
+div.select
+{
+    display: none;
+}

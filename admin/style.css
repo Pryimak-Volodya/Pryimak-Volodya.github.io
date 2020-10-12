@@ -98,7 +98,7 @@ body {
 .edit_user {
     position: absolute;
     width: 85%;
-    height: 40vh;
+    height: 95%;
     background-color: rgb(31, 48, 60);
     left: 2%;
     border-radius: 10px;
@@ -107,7 +107,7 @@ body {
 
 .edit_user_menu {
     width: 100%;
-    height: 20%;
+    height: 15%;
     /* background-color: gold; */
 }
 
@@ -159,9 +159,9 @@ body {
 }
 
 .ul_user {
-    overflow: scroll;
+    overflow: auto;
     width: 100%;
-    height: 80%;
+    height: 90%;
 }
 
 .ul_user ul {
@@ -173,10 +173,6 @@ body {
 
 .ul_user ul li {
     margin: 0.5% 0 1.5% 0;
-}
-
-#number_user_for_admin {
-    padding: 0 0 0 2%;
 }
 
 .icons_user_for_adnim {
@@ -201,6 +197,14 @@ body {
     width: 16%;
     display: inline-block;
     overflow: hidden;
+}
+
+#number_user_for_admin {
+    /* background-color: red; */
+    padding: 0 1%;
+    display: inline-block;
+    width: 4%;
+    text-align: center;
 }
 
 /* [admin_user] */
