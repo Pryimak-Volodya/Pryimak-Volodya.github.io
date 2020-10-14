@@ -38,7 +38,6 @@ function updateTime(k) {
 }
 currentTime();
 //TO_JSON//
-var user;
 var listTo = document.getElementsByTagName("label");
 var inputTo = document.getElementsByTagName("input");
 var user_name_entrance;
