@@ -36,6 +36,7 @@ $(document).ready(function () {
                     url: "list.php",
                     type: "POST",
                     data: ({name:user_name_entrance, password:user_password_entrance}),
+                    dataType: "html",
                     success: function(data) {
                         console.log(data);
                     }
