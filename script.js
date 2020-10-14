@@ -21,22 +21,32 @@ $(document).ready(function () {
         user_password_entrance = $('#password').val();
         for (i = 0; i < user_dataBase.length; i++) {
             if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
-                if (user_dataBase[i].status === "chief") link = link_chief;
-                if (user_dataBase[i].status === "worker") link = link_worker;
-                if (user_dataBase[i].status === "admin") link = link_admin;
+                if (user_dataBase[i].status === "chief") {
+                    link = link_chief
+                }
+                if (user_dataBase[i].status === "worker") {
+                    link = link_worker
+                }
+                if (user_dataBase[i].status === "admin") {
+                    link = link_admin
+                }
                 onLine = true;
 ///TEST
                 $.ajax({
                     url: "list.php",
                     type: "POST",
-                    data: ({key:user_name_entrance, value: onLine}),
-                    dataType: "html"
+                    data: ({name:user_name_entrance, password:user_password_entrance}),
+                    success: function(data) {
+                        console.log(data);
+                    }
                 });
+
+
                 ///
-               return profile_user();
+             //  return profile_user();
             }
         }
-        return alert('Помилка входу');
+      //  return alert('Помилка входу');
     }
     function profile_user() {
         $("body").fadeOut(1000, redirect);

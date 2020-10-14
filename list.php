@@ -1,3 +1,3 @@
 <?php
-    echo "Data  - key:".$_POST['key'].", value:".$_POST['value'];
+    echo "Data  - name:".$_POST['name'].", password:".$_POST['password'];
 ?>
