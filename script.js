@@ -46,7 +46,7 @@ $(document).ready(function () {
              //  return profile_user();
             }
         }
-      //  return alert('Помилка входу');
+       return alert('Помилка входу');
     }
     function profile_user() {
         $("body").fadeOut(1000, redirect);
