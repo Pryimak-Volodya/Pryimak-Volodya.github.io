@@ -6,7 +6,7 @@ $(document).ready(function(){
         $("body").fadeOut(1500, redirect);
        function redirect() {
            $(location).attr('href', golovna);
-       };
+       }
     });
     $('.addDeal').on('click', function () {
         $('.edit ol').append('<li class="dial"><input><button class="dell">X</button></li>');
@@ -38,7 +38,7 @@ function updateTime(k) {
 }
 currentTime();
 //TO_JSON//
-
+var user;
 var listTo = document.getElementsByTagName("label");
 var inputTo = document.getElementsByTagName("input");
 var user_name_entrance;
@@ -60,10 +60,20 @@ function getPosition(){
             WorkerName = user_dataBase[i].name;
         }
     }
-    $('#workerName').append("<i>"+WorkerName+"</i>");
-    $('#position').append("<i>"+WorkerPost+"</i>");
+    $('#workerName').append(WorkerName);
+    $('#position').append("<span>"+WorkerPost+"</span>");
 }
 getPosition();
+
+$.ajax({
+    type: 'GET',
+    url: 'http://rest.learncode.academy/api/johnbob/friends',
+    success: function (data) {
+        var user = JSON.parse(data);
+    }
+});
+console.log(user);
+
 
 
 

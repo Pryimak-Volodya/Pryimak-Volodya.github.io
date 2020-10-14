@@ -26,13 +26,13 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 /*--------------------*/
 
-img{
+img {
     width: 100%;
     display: block;
 }
 @font-face {
     font-family: Poppins-Regular;
-    src: url('../fonts/Courier\Courier New.ttf');
+    src: url('../fonts/Courier New.ttf');
 }
 @font-face {
     font-family: Montserrat-Bold;
@@ -46,8 +46,10 @@ img{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    left: 0;
     filter: blur(3px);
     z-index: 1;
+
 }
 header {
     position: relative;
@@ -55,34 +57,31 @@ header {
     top: 0;
     left: 0;
     z-index: 2;
+    margin-bottom: 25px;
 }
 #clock {
     position: fixed;
     top: 15px;
     left: 15px;
-    font-family: Poppins-Regular;
+    font-family: Montserrat-Bold, serif;
     background-color: white;
     color: black;
     font-size: 2em;
     text-align: center;
-    padding-top: 2px;
     padding: 2px;
-    border: #666666 solid 1px;
     border-radius: 10px;
-
 }
 #exit {
     position: fixed;
     float: right;
-    top: 5px;
+    top: 10px;
     right: 5px;
     border: 1px solid silver;
     border-radius: 15px;
     padding: 8px;
     color: black;
     font-size: 1.8em;
-    font-family: Montserrat-Bold;
-
+    font-family: Montserrat-Bold, sans-serif;
 }
 header h1 {
     position: relative;
@@ -90,16 +89,15 @@ header h1 {
     top: 3px;
     font-size: 2.4em;
     display: inline-block;
-    font-family: Poppins-Regular;
+    font-family: Montserrat-Bold, serif;
     background-color: white;
-    border: 1px solid #666666;
     border-radius: 15px;
     color: black;
     text-align: center;
     font-weight: 100;
     padding: 15px;
+    margin-top: 10px;
     z-index: 2;
-
 }
 #exit:hover, .addDeal:hover, .dell:hover, .send:hover {
     background-color: silver;
@@ -110,19 +108,6 @@ header h1 {
     transition: 0.3s;
     outline: none;
 }
-.user p{
-    font-size: 3em;
-    font-family: Poppins-Regular;
-    font-weight: 500;
-    padding: 5px;
-}
-.user span {
-    display: block;
-    font-size: 2em;
-    font-family: Poppins-Regular;
-    padding: 15px 5px;
-    text-align: left;
-}
 .user {
     display: inline-block;
     position: relative;
@@ -131,10 +116,30 @@ header h1 {
     width: 400px;
     height: 370px;
     margin: 20px;
-    border: 1px solid #666666;
     text-align: center;
     border-radius: 15px;
     z-index: 2;
+}
+.user p{
+    font-size: 2em;
+    font-family: Montserrat-Bold, serif;
+    font-weight: 500;
+    padding: 8px;
+}
+p span {
+    font-size: 1em;
+    font-family: Poppins-Regular, serif;
+    text-align: left;
+}
+.fotoUser {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 10px auto;
+    background-image: url(../img/chief.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 15px;
 }
 .listSprav {
     display: inline-block;
@@ -143,38 +148,27 @@ header h1 {
     float: left;
     margin: 25px;
     background-color: white;
-    border: 1px solid #666666;
     border-radius: 15px;
     z-index: 2;
-}
-.fotoUser {
-    position: relative;
-    width: 50%;
-    height: 50%;
-    margin: 10px auto;
-    background-image: url(../img/worker.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    border: 1px solid black;
-    border-radius: 15px;
 }
 ol {
     position: relative;
     padding: 30px;
+    margin-left: 10px;
     font-size: 1.2em;
     z-index: 2;
 }
 ol h1 {
     font-weight: 400;
     font-size: 2em;
-    font-family: Poppins-Regular;
+    font-family: Poppins-Regular, serif;
     margin-left: 15px;
     cursor: default;
 }
 li {
     margin: 15px;
     font-size: 1.2em;
-    font-family: Poppins-Regular;
+    font-family: Poppins-Regular, serif;
 }
 input {
     display: inline-block;
@@ -195,7 +189,18 @@ input + label{
 input:checked + label {
     font-weight: 600;
 }
-.send {
+.edit {
+    display: block;
+    width: 50%;
+}
+.edit input{
+    width: 80%;
+    height: 16px;
+    padding: 15px;
+    font-size: 1.2em;
+    color: black;
+}
+.addDeal, .send {
     position: relative;
     top: 5px;
     right: 5px;
@@ -205,6 +210,18 @@ input:checked + label {
     margin-left: 15px;
     color: black;
     font-size: 1em;
-    font-family: Montserrat-Bold;
+    font-family: Montserrat-Bold, serif;
+
+}
+.dell {
+    position: relative;
+    left: 15px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 3px;
+    color: black;
+    font-size: 0.9em;
+    font-family: Montserrat-Bold, serif;
+ 
 }
 
