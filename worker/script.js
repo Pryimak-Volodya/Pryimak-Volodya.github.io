@@ -65,14 +65,6 @@ function getPosition(){
 }
 getPosition();
 
-$.ajax({
-    type: 'GET',
-    url: 'http://rest.learncode.academy/api/johnbob/friends',
-    success: function (data) {
-        var user = JSON.parse(data);
-    }
-});
-console.log(user);
 
 
 

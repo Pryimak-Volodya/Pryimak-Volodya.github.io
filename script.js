@@ -24,18 +24,11 @@ $(document).ready(function () {
                 if (user_dataBase[i].status === "chief") link = link_chief;
                 if (user_dataBase[i].status === "worker") link = link_worker;
                 if (user_dataBase[i].status === "admin") link = link_admin;
-                user = {
+                newUser = {
                     name: user_name_entrance,
                     onLine: true
                 };
-                $.ajax({
-                    type: 'POST',
-                    url: 'http://rest.learncode.academy/api/johnbob/friends',
-                    success: function () {
-                        JSON.stringify(user);
-                    }
-                });
-                return profile_user();
+               return profile_user();
             }
         }
         return alert('Помилка входу');
@@ -45,9 +38,7 @@ $(document).ready(function () {
         function redirect() {
             $(location).attr('href', link);
         }
-
     }
-
 
     $('.user_status').on("click", function () {
         $(select).slideDown()
