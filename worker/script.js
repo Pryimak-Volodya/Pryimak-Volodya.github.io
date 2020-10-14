@@ -26,7 +26,7 @@ function currentTime() {
     min = updateTime(min);
     sec = updateTime(sec);
     document.getElementById("clock").innerText = hour + ":" + min + ":" + sec;
-    var t = setTimeout(currentTime, 1000);
+    setTimeout(currentTime, 1000);
 }
 function updateTime(k) {
     if (k < 10) {
@@ -37,11 +37,11 @@ function updateTime(k) {
     }
 }
 currentTime();
-//TO_JSON//
+/*
 var listTo = document.getElementsByTagName("label");
 var inputTo = document.getElementsByTagName("input");
 var user_name_entrance;
-
+*/
 $.ajax({
     url: '../user.json',
     method: 'get',
