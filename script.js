@@ -25,13 +25,14 @@ $(document).ready(function () {
                 if (user_dataBase[i].status === "worker") link = link_worker;
                 if (user_dataBase[i].status === "admin") link = link_admin;
                 onLine = true;
-
+///TEST
                 $.ajax({
                     url: "list.php",
                     type: "POST",
                     data: ({key:user_name_entrance, value: onLine}),
                     dataType: "html"
                 });
+                ///
                return profile_user();
             }
         }
