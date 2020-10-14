@@ -24,10 +24,14 @@ $(document).ready(function () {
                 if (user_dataBase[i].status === "chief") link = link_chief;
                 if (user_dataBase[i].status === "worker") link = link_worker;
                 if (user_dataBase[i].status === "admin") link = link_admin;
-                newUser = {
-                    name: user_name_entrance,
-                    onLine: true
-                };
+                onLine = true;
+
+                $.ajax({
+                    url: "list.php",
+                    type: "POST",
+                    data: ({key:user_name_entrance, value: onLine}),
+                    dataType: "html"
+                });
                return profile_user();
             }
         }
