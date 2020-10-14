@@ -41,9 +41,7 @@ $(document).ready(function () {
                     }
                 });
 
-
-                ///
-             //  return profile_user();
+             return profile_user();
             }
         }
        return alert('Помилка входу');
