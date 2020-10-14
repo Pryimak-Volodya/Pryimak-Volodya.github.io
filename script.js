@@ -25,7 +25,7 @@ $(document).ready(function () {
                 if (user_dataBase[i].status === "chief") link = link_chief;
                 if (user_dataBase[i].status === "worker") link = link_worker;
                 if (user_dataBase[i].status === "admin") link = link_admin;
-
+                
                /*export function goto() {
                    // return user_dataBase[i].name;
                    console.log(true);
