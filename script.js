@@ -1,11 +1,9 @@
 $(document).ready(function () {
     $('body').css("display", "none").fadeIn(1000);
-    var golovna = "index.html";
     var link_chief = "chief/index.html";
     var link_worker = "worker/index.html";
     var link_admin = "admin/index.html";
     var link;
-   
     $.ajax({
         url: './user.json',
         method: 'get',
@@ -15,7 +13,8 @@ $(document).ready(function () {
             person = JSON.parse(name);
         }
     });
-    user_dataBase = person;
+    var user_dataBase = person;
+
     $('#enter').on('click', authorization);
     function authorization() {
         user_name_entrance = $('#name').val();
@@ -25,12 +24,16 @@ $(document).ready(function () {
                 if (user_dataBase[i].status === "chief") link = link_chief;
                 if (user_dataBase[i].status === "worker") link = link_worker;
                 if (user_dataBase[i].status === "admin") link = link_admin;
-                
-               /*export function goto() {
-                   // return user_dataBase[i].name;
-                   console.log(true);
-                }*/
-                return profile_user();
+                onLine = true;
+///TEST
+                $.ajax({
+                    url: "list.php",
+                    type: "POST",
+                    data: ({key:user_name_entrance, value: onLine}),
+                    dataType: "html"
+                });
+                ///
+               return profile_user();
             }
         }
         return alert('Помилка входу');
@@ -41,13 +44,13 @@ $(document).ready(function () {
             $(location).attr('href', link);
         }
     }
+
     $('.user_status').on("click", function () {
         $(select).slideDown()
     });
     $(".option").on("click", function () {
-
         $("#status").text($(this).text());
-
         $(select).slideUp();
     });
+
 });

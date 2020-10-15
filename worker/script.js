@@ -1,6 +1,4 @@
-/*import { goto } from " ../script.js";*/
 $(document).ready(function(){
-    console.log(goto);
     $('body').css("display", "none").fadeIn(1000);
     var golovna = "../index.html";
 
@@ -8,7 +6,7 @@ $(document).ready(function(){
         $("body").fadeOut(1500, redirect);
        function redirect() {
            $(location).attr('href', golovna);
-       };
+       }
     });
     $('.addDeal').on('click', function () {
         $('.edit ol').append('<li class="dial"><input><button class="dell">X</button></li>');
@@ -28,7 +26,7 @@ function currentTime() {
     min = updateTime(min);
     sec = updateTime(sec);
     document.getElementById("clock").innerText = hour + ":" + min + ":" + sec;
-    var t = setTimeout(currentTime, 1000);
+    setTimeout(currentTime, 1000);
 }
 function updateTime(k) {
     if (k < 10) {
@@ -39,46 +37,35 @@ function updateTime(k) {
     }
 }
 currentTime();
-//TO_JSON//
-
+/*
 var listTo = document.getElementsByTagName("label");
 var inputTo = document.getElementsByTagName("input");
-var JsonURL = '../list.json';
-
-
-console.log(listTo);
-console.log(inputTo);
-
+var user_name_entrance;
+*/
 $.ajax({
-    url: '../lost.json',
+    url: '../user.json',
     method: 'get',
     async: false,
     dataType: 'html',
-    success: function (name) {
-        list = JSON.parse(name);
+    success: function (position) {
+        list = JSON.parse(position);
     }
 });
-
-
-/*
-document.addEventListener("click", function () {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            let allResp = JSON.parse(xhr.responseText)
-            }
+user_dataBase = list;
+function getPosition(){
+    for  (i = 0; i < user_dataBase.length; i++) {
+        if (user_dataBase[i].online) {
+            WorkerPost = user_dataBase[i].position;
+            WorkerName = user_dataBase[i].name;
+        }
     }
-    xhr.open(
-        'POST',
-        JsonURL,
-        );
-    const listWorker = {
-        "li1": "task1",
-        "li2": "task1",
-        "li3": "task1",
-        };
-    xhr.send(JSON.stringify(listWorker));
-})
-*/
+    $('#workerName').append(WorkerName);
+    $('#position').append("<span>"+WorkerPost+"</span>");
+}
+getPosition();
+
+
+
+
 
 

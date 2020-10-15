@@ -1,80 +1,92 @@
-[{
+[   {
         "name": "Андрій",
         "password": "andrii_1",
         "status": "admin",
-        "online":false
-    }, {
+        "online":false,
+        "position": "Адміністратор"
+    },
+    {
         "name": "Ростислав",
         "password": "rostyslav_1",
         "status": "worker",
-        "online":false,
-        "position": "Перший куда потрібно"
+        "online": true,
+        "position": "Роботяга"
     },
     {
         "name": "Рома",
         "password": "roma_1",
         "status": "chief",
-        "online":false
+        "online":false,
+        "position": "Начальніка №1"
     },
     {
         "name": "Сергій",
         "password": "serjey_1",
         "status": "admin",
-        "online":false
+        "online":false,
+        "position": "Адміністратор"
     },
     {
         "name": "admin",
         "password": "admin",
         "status": "admin",
         "online":false,
-        "position": "Administrator"
+        "position": "Адміністратор"
     },
     {
         "name": "Микола",
         "password": "mykola_1",
         "status": "worker",
-        "online":false
+        "online":false,
+        "position": "Роботяга №3"
     },
     {
         "name": "Яна",
         "password": "jana_1",
         "status": "worker",
-        "online":false
+        "online":false,
+        "position": "Не до роботи"
     },
     {
         "name": "Вова",
         "password": "vova_1",
         "status": "admin",
-        "online":false
+        "online":false,
+        "position": "Адміністратор"
     },
     {
         "name": "Галка",
         "password": "galka_1",
         "status": "worker",
-        "online":false
+        "online":false,
+        "position": "Палка"
     },
     {
         "name": "Таня",
         "password": "tania_1",
         "status": "worker",
-        "online":false
+        "online":false,
+        "position": "Роботяга №2"
     },
     {
         "name": "Діма",
         "password": "dima_1",
         "status": "worker",
-        "online":false
+        "online":false,
+        "position": "Ледацюга"
     },
     {
         "name": "Катя",
         "password": "katia_1",
         "status": "chief",
-        "online":false
+        "online":false,
+        "position": "Начальніка №2"
     },
     {
         "name": "Оля",
         "password": "olena_1",
         "status": "chief",
-        "online":false
+        "online":false,
+        "position": "Начальніка №3"
     }
 ]
