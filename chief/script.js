@@ -2,12 +2,6 @@ $(document).ready(function(){
     $('body').css("display", "none").fadeIn(1000);
     var golovna = "../index.html";
 
-    $('#exit').on('click', function () {
-        $("body").fadeOut(1500, redirect);
-       function redirect() {
-           $(location).attr('href', golovna);
-       };
-    });
     $('.addDeal').on('click', function () {
         $('.edit ol').append('<li class="dial"><input><button class="dell">X</button></li>');
             $('.dell').on('click', function () {
@@ -15,20 +9,24 @@ $(document).ready(function(){
              $(th).remove('.dial');
             });
     })
-
-    $.ajax({
-        url: '../user.json',
-        method: 'get',
-        async: false,
-        dataType: 'html',
-        success: function (name) {
-            person = JSON.parse(name);
+////////Через localStorage//////////
+    var myBase = JSON.parse(localStorage.getItem('myBase'));
+    for  (i = 0; i < myBase.length; i++) {
+        if (myBase[i].online) {
+            ChiefPost = myBase[i].position;
+            ChiefName = myBase[i].name;
         }
-    });
-    user_dataBase = person;
-    $('#chiefrName').text(user_dataBase.name);
+    }
+    $('#chiefrName').text(ChiefName);
+    $('#position').append("<span>" +ChiefPost+"</span>");
 
-});
+    $('#exit').on('click', function () {
+        $("body").fadeOut(1500, redirect);
+        function redirect() {
+            $(location).attr('href', golovna);
+
+        }
+    })
 //  clock //
 function currentTime() {
     var date = new Date();
@@ -50,3 +48,20 @@ function updateTime(k) {
     }
 }
 currentTime();
+////////Через JSON на сервері//////////
+/*
+    $.ajax({
+        url: '../user.json',
+        method: 'get',
+        async: false,
+        dataType: 'html',
+        success: function (name) {
+            person = JSON.parse(name);
+        }
+    });
+    user_dataBase = person;
+    $('#chiefrName').text(user_dataBase.name);
+
+});
+ */
+});

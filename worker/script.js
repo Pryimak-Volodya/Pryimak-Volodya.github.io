@@ -2,20 +2,7 @@ $(document).ready(function(){
     $('body').css("display", "none").fadeIn(1000);
     var golovna = "../index.html";
 
-    $('#exit').on('click', function () {
-        $("body").fadeOut(1500, redirect);
-       function redirect() {
-           $(location).attr('href', golovna);
-       }
-    });
-    $('.addDeal').on('click', function () {
-        $('.edit ol').append('<li class="dial"><input><button class="dell">X</button></li>');
-            $('.dell').on('click', function () {
-                let th = $(this).parent();
-             $(th).remove('.dial');
-            });
-    })
-});
+
 //  clock //
 function currentTime() {
     var date = new Date();
@@ -37,11 +24,26 @@ function updateTime(k) {
     }
 }
 currentTime();
+////////Через localStorage//////////
+var myBase = JSON.parse(localStorage.getItem('myBase'));
+    for  (i = 0; i < myBase.length; i++) {
+    if (myBase[i].online) {
+        WorkerPost = myBase[i].position;
+        WorkerName = myBase[i].name;
+    }
+}
+$('#workerName').append(WorkerName);
+$('#position').append("<span>"+WorkerPost+"</span>");
+
+$('#exit').on('click', function () {
+    $("body").fadeOut(1500, redirect);
+    function redirect() {
+        $(location).attr('href', golovna);
+
+    }
+})
+////////Через JSON на сервері//////////
 /*
-var listTo = document.getElementsByTagName("label");
-var inputTo = document.getElementsByTagName("input");
-var user_name_entrance;
-*/
 $.ajax({
     url: '../user.json',
     method: 'get',
@@ -63,9 +65,17 @@ function getPosition(){
     $('#position').append("<span>"+WorkerPost+"</span>");
 }
 getPosition();
+*/
+////////Через script.js//////////
+/*
+    $.ajax({
+        url: '../script.js',
+        dataType: "script",
+        async: false,
+        success: function (data) {
+            console.log(this.on);
+        }
+    });
 
-
-
-
-
-
+*/
+});

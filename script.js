@@ -14,7 +14,7 @@ $(document).ready(function () {
         }
     });
     var user_dataBase = person;
-
+    console.log(user_dataBase);
     $('#enter').on('click', authorization);
     function authorization() {
         user_name_entrance = $('#name').val();
@@ -30,18 +30,8 @@ $(document).ready(function () {
                 if (user_dataBase[i].status === "admin") {
                     link = link_admin
                 }
-                onLine = true;
-///TEST
-                $.ajax({
-                    url: "list.php",
-                    type: "POST",
-                    data: ({name:user_name_entrance, password:user_password_entrance}),
-                    dataType: "html",
-                    success: function(data) {
-                        console.log(data);
-                    }
-                });
-
+                user_dataBase[i].online = true;
+                localStorage.setItem('myBase', JSON.stringify(user_dataBase));
              return profile_user();
             }
         }

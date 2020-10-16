@@ -2,14 +2,14 @@
         "name": "Андрій",
         "password": "andrii_1",
         "status": "admin",
-        "online":false,
+        "online": false,
         "position": "Адміністратор"
     },
     {
         "name": "Ростислав",
         "password": "rostyslav_1",
         "status": "worker",
-        "online": true,
+        "online": false,
         "position": "Роботяга"
     },
     {
