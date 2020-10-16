@@ -24,7 +24,6 @@ $(document).ready(function(){
         $("body").fadeOut(1500, redirect);
         function redirect() {
             $(location).attr('href', golovna);
-
         }
     })
 //  clock //
@@ -61,7 +60,6 @@ currentTime();
     });
     user_dataBase = person;
     $('#chiefrName').text(user_dataBase.name);
-
 });
  */
 });
