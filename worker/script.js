@@ -2,7 +2,6 @@ $(document).ready(function(){
     $('body').css("display", "none").fadeIn(1000);
     var golovna = "../index.html";
 
-
 //  clock //
 function currentTime() {
     var date = new Date();
@@ -76,6 +75,5 @@ getPosition();
             console.log(this.on);
         }
     });
-
 */
 });
