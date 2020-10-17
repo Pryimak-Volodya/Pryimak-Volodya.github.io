@@ -31,7 +31,7 @@ $(document).ready(function () {
                     link = link_admin
                 }
                 user_dataBase[i].online = true;
-                localStorage.setItem('myBase', JSON.stringify(user_dataBase));
+                sessionStorage.setItem('myBase', JSON.stringify(user_dataBase));
              return profile_user();
             }
         }

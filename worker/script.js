@@ -23,8 +23,8 @@ function updateTime(k) {
     }
 }
 currentTime();
-////////Через localStorage//////////
-var myBase = JSON.parse(localStorage.getItem('myBase'));
+////////Через sessionStorage//////////
+var myBase = JSON.parse(sessionStorage.getItem('myBase'));
     for  (i = 0; i < myBase.length; i++) {
     if (myBase[i].online) {
         WorkerPost = myBase[i].position;
