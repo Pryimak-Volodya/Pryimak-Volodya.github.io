@@ -14,7 +14,6 @@ $(document).ready(function () {
         }
     });
     var user_dataBase = person;
-    console.log(user_dataBase);
     $('#enter').on('click', authorization);
     function authorization() {
         user_name_entrance = $('#name').val();
@@ -43,7 +42,6 @@ $(document).ready(function () {
             $(location).attr('href', link);
         }
     }
-
     $('.user_status').on("click", function () {
         $(select).slideDown()
     });

@@ -36,6 +36,7 @@ $('#position').append("<span>"+WorkerPost+"</span>");
 
 $('#exit').on('click', function () {
     $("body").fadeOut(1500, redirect);
+    sessionStorage.clear();
     function redirect() {
         $(location).attr('href', golovna);
 
