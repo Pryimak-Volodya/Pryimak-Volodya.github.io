@@ -14,29 +14,27 @@ $(document).ready(function () {
         }
     });
     var user_dataBase = person;
-
     $('#enter').on('click', authorization);
     function authorization() {
         user_name_entrance = $('#name').val();
         user_password_entrance = $('#password').val();
         for (i = 0; i < user_dataBase.length; i++) {
             if (user_dataBase[i].name === user_name_entrance && user_dataBase[i].password === user_password_entrance) {
-                if (user_dataBase[i].status === "chief") link = link_chief;
-                if (user_dataBase[i].status === "worker") link = link_worker;
-                if (user_dataBase[i].status === "admin") link = link_admin;
-                onLine = true;
-///TEST
-                $.ajax({
-                    url: "list.php",
-                    type: "POST",
-                    data: ({key:user_name_entrance, value: onLine}),
-                    dataType: "html"
-                });
-                ///
-               return profile_user();
+                if (user_dataBase[i].status === "chief") {
+                    link = link_chief
+                }
+                if (user_dataBase[i].status === "worker") {
+                    link = link_worker
+                }
+                if (user_dataBase[i].status === "admin") {
+                    link = link_admin
+                }
+                user_dataBase[i].online = true;
+                sessionStorage.setItem('myBase', JSON.stringify(user_dataBase));
+             return profile_user();
             }
         }
-        return alert('Помилка входу');
+       return alert('Помилка входу');
     }
     function profile_user() {
         $("body").fadeOut(1000, redirect);
@@ -44,7 +42,6 @@ $(document).ready(function () {
             $(location).attr('href', link);
         }
     }
-
     $('.user_status').on("click", function () {
         $(select).slideDown()
     });

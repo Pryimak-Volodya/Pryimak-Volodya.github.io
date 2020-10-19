@@ -1,34 +1,61 @@
 $(document).ready(function(){
     $('body').css("display", "none").fadeIn(1000);
     var golovna = "../index.html";
+////Список завдань//////
+    var todoList = [];
 
-    $('#exit').on('click', function () {
-        $("body").fadeOut(1500, redirect);
-       function redirect() {
-           $(location).attr('href', golovna);
-       };
-    });
+    if (localStorage.getItem('todo')) {
+        todoList = JSON.parse(localStorage.getItem('todo'));
+        out();
+    }
+    document.getElementById('addDeal').onclick = function () {
+        var temp = {};
+        temp.todo = document.getElementById('in').value;
+        temp.check = false;
+        todoList.push(temp);
+        out();
+       localStorage.setItem('todo', JSON.stringify(todoList));
+    }
+    function out() {
+        var out = '';
+        for (i = 0; i < todoList.length; i++) {
+                out += '<li class="dial">'+ todoList[i].todo +'<button id="dell">X</button></li>';
+        }
+        document.getElementById('out').innerHTML = out;
+        document.getElementById("dell").onclick = function() {
+            this.parentNode.parentNode.removeChild(this.parentNode);
+        }
+    }
+/*
+
     $('.addDeal').on('click', function () {
         $('.edit ol').append('<li class="dial"><input><button class="dell">X</button></li>');
             $('.dell').on('click', function () {
                 let th = $(this).parent();
              $(th).remove('.dial');
             });
+
     })
 
-    $.ajax({
-        url: '../user.json',
-        method: 'get',
-        async: false,
-        dataType: 'html',
-        success: function (name) {
-            person = JSON.parse(name);
+*/
+////////Через sessionStorage//////////
+    var myBase = JSON.parse(sessionStorage.getItem('myBase'));
+    for  (i = 0; i < myBase.length; i++) {
+        if (myBase[i].online) {
+            ChiefPost = myBase[i].position;
+            ChiefName = myBase[i].name;
         }
-    });
-    user_dataBase = person;
-    $('#chiefrName').text(user_dataBase.name);
+    }
+    $('#chiefrName').text(ChiefName);
+    $('#position').append("<span>" +ChiefPost+"</span>");
 
-});
+    $('#exit').on('click', function () {
+        $("body").fadeOut(1500, redirect);
+        sessionStorage.clear();
+        function redirect() {
+            $(location).attr('href', golovna);
+        }
+    })
 //  clock //
 function currentTime() {
     var date = new Date();
@@ -50,3 +77,19 @@ function updateTime(k) {
     }
 }
 currentTime();
+////////Через JSON на сервері//////////
+/*
+    $.ajax({
+        url: '../user.json',
+        method: 'get',
+        async: false,
+        dataType: 'html',
+        success: function (name) {
+            person = JSON.parse(name);
+        }
+    });
+    user_dataBase = person;
+    $('#chiefrName').text(user_dataBase.name);
+});
+ */
+});
