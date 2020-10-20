@@ -204,7 +204,7 @@ input:checked + label {
     font-size: 1.2em;
     color: black;
 }
-#addDeal {
+#addDeal, #send {
     position: relative;
     top: 5px;
     right: 5px;
@@ -217,9 +217,10 @@ input:checked + label {
     font-family: Montserrat-Bold, serif;
 
 }
-#dell {
+.dell {
     position: relative;
     left: 15px;
+    float: right;
     border: 1px solid silver;
     border-radius: 5px;
     padding: 3px;
