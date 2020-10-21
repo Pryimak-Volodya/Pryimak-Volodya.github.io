@@ -48,7 +48,7 @@ img {
     background-repeat: no-repeat;
     left: 0;
     filter: blur(3px);
-    z-index: 1;
+    z-index: 0;
 
 }
 header {
@@ -141,16 +141,70 @@ p span {
     background-repeat: no-repeat;
     border-radius: 15px;
 }
-.listSprav {
-    display: inline-block;
+.tabbed {
     position: relative;
-    width: auto;
-    float: left;
-    margin: 25px;
-    background-color: white;
-    border-radius: 15px;
+    max-width: 900px;
+    margin: 30px auto;
     z-index: 2;
+}
+.tabbed > input {
+    display: none;
+}
+.tabbed > label {
+    display: block;
+    float: left;
+    padding: 12px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2em;
+    font-family: Montserrat-Bold, serif;
+}
+.tabbed > label:hover,
+.tabbed > input:checked + label {
+    background: white;
+    border-radius: 5px;
+}
+.tabs {
+    display: inline-block;
+    perspective: 600px;
+}
+#tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
+#tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
+#tab-nav-3:checked ~ .tabs > div:nth-of-type(3) {
+    transform: rotateX(0);
+    opacity: 1;
+    z-index: 1;
+}
+@media screen and (max-width: 700px) {
+    .tabbed {
+        width: 400px;
+    }
+    .tabbed > label {
+        display: none;
+    }
+    .tabs > div {
+        width: 400px;
+        border: none;
+        padding: 0;
+        opacity: 1;
+        position: relative;
+        transform: none;
+        margin-bottom: 60px;
+    }
+}
+.tabs > div {
+    max-width: 900px;
+    position: relative;
     padding: 10px;
+    border-radius: 15px;
+    opacity: 1;
+    transform: rotateX(0);
+    transform-origin: top center;
+    transition: opacity 0.3s, transform 1s;
+    float: left;
+    background-color: white;
+    z-index: 2;
 }
 ol {
     position: relative;
@@ -159,7 +213,7 @@ ol {
     font-size: 1.2em;
     z-index: 2;
 }
-.listSprav h1 {
+.tabs > div h1 {
     font-weight: 400;
     font-size: 2em;
     font-family: Poppins-Regular, serif;
@@ -193,11 +247,7 @@ input + label{
 input:checked + label {
     font-weight: 600;
 }
-.edit {
-    display: block;
-    width: 50%;
-}
-.edit input{
+.tabs > div input{
     width: 80%;
     height: 16px;
     padding: 15px;
@@ -215,7 +265,6 @@ input:checked + label {
     color: black;
     font-size: 1em;
     font-family: Montserrat-Bold, serif;
-
 }
 .dell {
     position: relative;
