@@ -20,12 +20,23 @@
         <div class="fotoUser"></div>
         <p id="position">Посада:</p>
     </div>
-    <div class="listSprav edit">
-        <h1>Список справ для:<span>Worker ID</span></h1>
-        <button id="addDeal">Додати</button>
-        <input id="in" type="text">
-        <ol id="out">
-        </ol>
+    <div class="tabbed">
+        <input type="radio" name="tabs" id="tab-nav-1" checked>
+        <label for="tab-nav-1">WorkerName1</label>
+        <input type="radio" name="tabs" id="tab-nav-2">
+        <label for="tab-nav-2">WorkerName2</label>
+        <input type="radio" name="tabs" id="tab-nav-3">
+        <label for="tab-nav-3">WorkerName3</label>
+    </div>
+    <div class="tabs">
+        <div>
+            <h1>Список справ для:<span>WorkerName1</span></h1>
+            <button id="addDeal">Додати</button>
+            <input id="in" type="text">
+            <ol id="out">
+            </ol>
+            <button id="send">Відправити</button>
+        </div>
     </div>
 <script src="script.js"></script>
 </body>
