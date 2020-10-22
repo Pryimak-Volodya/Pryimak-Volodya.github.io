@@ -9,6 +9,38 @@ $(document).ready(function(){
         }
     })
 })
+
+////////Через sessionStorage//////////
+    var myBase = JSON.parse(sessionStorage.getItem('myBase'));
+    function getData() {
+        for (i = 0; i < myBase.length; i++) {
+            if (myBase[i].online) {
+                chiefName = myBase[i].name;
+                chiefPost = myBase[i].position;
+            }
+
+        }
+        $('#chiefName').text(chiefName);
+        $('#position').append("<span> " + chiefPost + "</span>");
+         getWorkers();
+    }
+    function getWorkers() {
+        for (i = 0; i < myBase.length; i++) {
+            if (myBase[i].chief === chiefName) {
+                workers = new Array(myBase[i].name);
+                console.log(workers);
+                //     workerName1 = workers[0];
+                //    workerName2 = workers[2];
+                //   workerName3 = myBase[2].name;
+            }
+        }
+        $('#tab-1, #nameForList').append(workerName1);
+        $('#tab-2').append(workerName2);
+        $('#tab-3').append(workerName3);
+
+    }
+    getData();
+
 ////Список завдань//////
     let todoList = [];
     if (localStorage.getItem('todo')) {
@@ -44,26 +76,7 @@ $(document).ready(function(){
         let th = $(this).parent();
         $(th).remove('.dial');
     })
-/*
-    $('.addDeal').on('click', function () {
-        $('.edit ol').append('<li class="dial"><input><button class="dell">X</button></li>');
-            $('.dell').on('click', function () {
-                let th = $(this).parent();
-             $(th).remove('.dial');
-            });
-    })
-////////Через sessionStorage//////////
-    var myBase = JSON.parse(sessionStorage.getItem('myBase'));
-    for  (i = 0; i < myBase.length; i++) {
-        if (myBase[i].online) {
-            ChiefPost = myBase[i].position;
-            ChiefName = myBase[i].name;
-        }
-    }
-    $('#chiefrName').text(ChiefName);
-    $('#position').append("<span>" +ChiefPost+"</span>");
 
-*/
 //  clock //
 function currentTime() {
     let date = new Date();
@@ -85,18 +98,5 @@ function updateTime(k) {
     }
 }
 currentTime();
-////////Через JSON на сервері//////////
-/*
-    $.ajax({
-        url: '../user.json',
-        method: 'get',
-        async: false,
-        dataType: 'html',
-        success: function (name) {
-            person = JSON.parse(name);
-        }
-    });
-    user_dataBase = person;
-    $('#chiefrName').text(user_dataBase.name);
-});
- */
+
+

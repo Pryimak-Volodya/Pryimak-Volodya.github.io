@@ -10,7 +10,8 @@
         "password": "rostyslav_1",
         "status": "worker",
         "online": false,
-        "position": "Роботяга"
+        "position": "Роботяга",
+        "chief": "Рома"
     },
     {
         "name": "Рома",
@@ -22,9 +23,10 @@
     {
         "name": "Сергій",
         "password": "serjey_1",
-        "status": "admin",
+        "status": "worker",
         "online": false,
-        "position": "Адміністратор"
+        "position": "Роботяга",
+        "chief": "Рома"
     },
     {
         "name": "admin",
@@ -38,7 +40,8 @@
         "password": "mykola_1",
         "status": "worker",
         "online": false,
-        "position": "Роботяга №3"
+        "position": "Ледацюга",
+        "chief": "Рома"
     },
     {
         "name": "Яна",
@@ -48,25 +51,27 @@
         "position": "Не до роботи"
     },
     {
-        "name": "Вова",
-        "password": "vova_1",
-        "status": "admin",
-        "online":false,
-        "position": "Адміністратор"
+        "name": "Катя",
+        "password": "katia_1",
+        "status": "chief",
+        "online": false,
+        "position": "Начальніка №2"
     },
     {
         "name": "Галка",
         "password": "galka_1",
         "status": "worker",
         "online":false,
-        "position": "Палка"
+        "position": "Палка",
+        "chief": "Катя"
     },
     {
         "name": "Таня",
         "password": "tania_1",
         "status": "worker",
         "online": false,
-        "position": "Роботяга №2"
+        "position": "Роботяга №2",
+        "chief": "Катя"
     },
     {
         "name": "Діма",
@@ -76,17 +81,11 @@
         "position": "Ледацюга"
     },
     {
-        "name": "Катя",
-        "password": "katia_1",
-        "status": "chief",
-        "online": false,
-        "position": "Начальніка №2"
-    },
-    {
         "name": "Оля",
         "password": "olena_1",
         "status": "chief",
         "online": false,
-        "position": "Начальніка №3"
+        "position": "Бараболя",
+        "chief": "Катя"
     }
 ]

@@ -48,15 +48,12 @@ img {
     background-repeat: no-repeat;
     left: 0;
     filter: blur(3px);
-    z-index: 0;
-
 }
 header {
     position: relative;
     display: block;
     top: 0;
     left: 0;
-    z-index: 2;
     margin-bottom: 25px;
 }
 #clock {
@@ -97,7 +94,6 @@ header h1 {
     font-weight: 100;
     padding: 15px;
     margin-top: 10px;
-    z-index: 2;
 }
 #exit:hover, .addDeal:hover, .dell:hover, .send:hover {
     background-color: silver;
@@ -113,12 +109,11 @@ header h1 {
     position: relative;
     background-color: white;
     float: left;
-    width: 400px;
+    width: 450px;
     height: 370px;
     margin: 20px;
     text-align: center;
     border-radius: 15px;
-    z-index: 2;
 }
 .user p{
     font-size: 2em;
@@ -141,11 +136,15 @@ p span {
     background-repeat: no-repeat;
     border-radius: 15px;
 }
+.listSprav{
+    position: relative;
+    display: inline-block;
+}
 .tabbed {
     position: relative;
     max-width: 900px;
-    margin: 30px auto;
-    z-index: 2;
+    height: auto;
+    margin: 30px 50px;
 }
 .tabbed > input {
     display: none;
@@ -157,6 +156,8 @@ p span {
     margin-right: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 200px;
+    text-align: center;
     font-size: 1.2em;
     font-family: Montserrat-Bold, serif;
 }
@@ -168,13 +169,13 @@ p span {
 .tabs {
     display: inline-block;
     perspective: 600px;
+    margin: 20px 50px;
 }
 #tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
 #tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
 #tab-nav-3:checked ~ .tabs > div:nth-of-type(3) {
     transform: rotateX(0);
     opacity: 1;
-    z-index: 1;
 }
 @media screen and (max-width: 700px) {
     .tabbed {
@@ -184,7 +185,7 @@ p span {
         display: none;
     }
     .tabs > div {
-        width: 400px;
+        width: 450px;
         border: none;
         padding: 0;
         opacity: 1;
@@ -194,7 +195,7 @@ p span {
     }
 }
 .tabs > div {
-    max-width: 900px;
+    width: 700px;
     position: relative;
     padding: 10px;
     border-radius: 15px;
@@ -204,14 +205,12 @@ p span {
     transition: opacity 0.3s, transform 1s;
     float: left;
     background-color: white;
-    z-index: 2;
 }
 ol {
     position: relative;
     padding: 20px;
     margin-left: 10px;
     font-size: 1.2em;
-    z-index: 2;
 }
 .tabs > div h1 {
     font-weight: 400;
@@ -248,7 +247,7 @@ input:checked + label {
     font-weight: 600;
 }
 .tabs > div input{
-    width: 80%;
+    width: 75%;
     height: 16px;
     padding: 15px;
     font-size: 1.2em;
