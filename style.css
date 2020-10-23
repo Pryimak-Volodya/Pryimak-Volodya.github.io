@@ -140,6 +140,7 @@ label {
     color: #666666;
     font-weight: 600;
 }
+<<<<<<< Updated upstream
 #enter:hover {
     background-color: rgb(67, 70, 75);
     cursor: pointer;
@@ -150,3 +151,9 @@ label {
     outline: none;
 }
 
+=======
+select
+{
+    width: 90%;
+}
+>>>>>>> Stashed changes
