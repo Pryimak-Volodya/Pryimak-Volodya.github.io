@@ -9,7 +9,6 @@ $(document).ready(function(){
         }
     })
 })
-
 ////////Через sessionStorage//////////
     var myBase = JSON.parse(sessionStorage.getItem('myBase'));
     function getData() {
@@ -18,28 +17,27 @@ $(document).ready(function(){
                 chiefName = myBase[i].name;
                 chiefPost = myBase[i].position;
             }
-
         }
         $('#chiefName').text(chiefName);
         $('#position').append("<span> " + chiefPost + "</span>");
-         getWorkers();
+        getWorkers()
     }
+    getData();
     function getWorkers() {
         for (i = 0; i < myBase.length; i++) {
             if (myBase[i].chief === chiefName) {
-                workers = new Array(myBase[i].name);
+                workers = new Object(myBase[i].name);
                 console.log(workers);
-                //     workerName1 = workers[0];
-                //    workerName2 = workers[2];
-                //   workerName3 = myBase[2].name;
+                workerName1 = workers;
+                workerName2 = workers;
+                workerName3 = myBase[1].name;
             }
         }
-        $('#tab-1, #nameForList').append(workerName1);
-        $('#tab-2').append(workerName2);
-        $('#tab-3').append(workerName3);
-
+    $('#tab-1, #nameForList').append(workerName1);
+    $('#tab-2').append(workerName2);
+    $('#tab-3').append(workerName3);
     }
-    getData();
+
 
 ////Список завдань//////
     let todoList = [];
@@ -51,7 +49,7 @@ $(document).ready(function(){
         let temp = {};
         temp.todo = document.querySelector('#in').value;
         temp.check = false;
-        temp.WorkerName = 'WorkerName';
+        temp.WorkerName = workerName1;
         todoList.push(temp);
         out();
        localStorage.setItem('todo', JSON.stringify(todoList));

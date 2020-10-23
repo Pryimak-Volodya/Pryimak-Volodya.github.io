@@ -143,11 +143,16 @@ p span {
 .listSprav {
     display: inline-block;
     position: relative;
-    width: auto;
-    float: left;
-    margin: 25px;
-    background-color: white;
+    width: 700px;
+    opacity: 1;
     border-radius: 15px;
+    transform: rotateX(0);
+    transform-origin: top center;
+    transition: opacity 0.3s, transform 1s;
+    float: left;
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
     z-index: 2;
 }
 ol {
@@ -155,7 +160,7 @@ ol {
     padding: 30px;
     margin-left: 10px;
     font-size: 1.2em;
-    z-index: 2;
+
 }
 ol h1 {
     font-weight: 400;
@@ -176,6 +181,7 @@ input {
     background: transparent;
     border: 2px solid black;
     border-radius: 3px;
+    margin: 5px;
     cursor: pointer;
 }
 input + label{
@@ -200,4 +206,15 @@ input:checked + label {
     font-size: 1em;
     font-family: Montserrat-Bold, serif;
 }
+.dell {
+    position: relative;
+    left: 15px;
+    float: right;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 3px;
+    color: black;
+    font-size: 0.9em;
+    font-family: Montserrat-Bold, serif;
 
+}
