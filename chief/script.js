@@ -24,20 +24,19 @@ $(document).ready(function(){
     }
     getData();
     function getWorkers() {
+        let work = [];
         for (i = 0; i < myBase.length; i++) {
             if (myBase[i].chief === chiefName) {
-                workers = new Object(myBase[i].name);
-                console.log(workers);
-                workerName1 = workers;
-                workerName2 = workers;
-                workerName3 = myBase[1].name;
+                work.push(myBase[i].name) ;
+                workerName1 = work[0];
+                workerName2 = work[1];
+                workerName3 = work[2];
             }
         }
     $('#tab-1, #nameForList').append(workerName1);
     $('#tab-2').append(workerName2);
     $('#tab-3').append(workerName3);
     }
-
 
 ////Список завдань//////
     let todoList = [];
@@ -65,14 +64,22 @@ $(document).ready(function(){
         document.querySelector(".dell").addEventListener('click', function() {
                this.parentNode.remove(this.parentNode);
         })*/
+        arr = Array.prototype.slice.call( $(".dial") );
+        console.log(arr);
         $('.dell').on('click', function () {
             let th = $(this).parent();
             $(th).remove('.dial');
+            indexLi = arr.indexOf(th[0]);
+           console.log(indexLi);
+           localStorage.removeItem('todo');
+
         })
     }
     $('.dell').on('click', function () {
         let th = $(this).parent();
         $(th).remove('.dial');
+      //  localStorage.removeItem();
+       // console.log(th);
     })
 
 //  clock //

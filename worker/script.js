@@ -26,7 +26,7 @@ function listOn() {
     let out = '';
     const outDiv = document.querySelector('#out');
     for (i = 0; i < todoList.length; i++) {
-        out += '<li class="dial"><input id="one" type="checkbox"/>'+ todoList[i].todo +'<button class="dell">X</button></li>';
+        out += '<li class="dial"><input id="one" type="checkbox"/>'+ todoList[i].todo +'</li>';
     }
     outDiv.innerHTML = out;
     $('#nameForList').append(WorkerName);
